@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre — João Victor Carvalho</title>
+    <meta
+      name="description"
+      content="Quem é João Victor Carvalho — desenvolvedor, estudante e curioso por natureza."
+    />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a
+          href="index.html"
+          class="site-logo"
+          aria-label="João Victor — Início"
+        >
+          joao.dev<span>()</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="blog.html">Blog</a>
+          <a href="gostos.html">Gostos</a>
+          <a href="agora.html">Agora</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="btn-icon"
+            aria-label="Alternar tema"
+            onclick="toggleTheme()"
+          >
+            <svg
+              class="icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
+              />
+            </svg>
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-icon btn-hamburger"
+            aria-label="Abrir menu"
+            onclick="toggleMobileNav()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+        <div class="container">
+          <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+          <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+          <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+          <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+          <a href="agora.html" onclick="closeMobileNav()">Agora</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="container">
+          <p class="eyebrow">Sobre mim</p>
+          <h1>Olá, eu sou o João 👋</h1>
+          <p>
+            Desenvolvedor Full-Stack, estudante e curioso por natureza. Aqui
+            você encontra quem sou de verdade — não só o dev.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===================== SOBRE MIM ===================== -->
+      <section class="section" aria-labelledby="sobre-title">
+        <div class="container">
+          <div class="about-grid">
+            <h2 id="sobre-title">Minha história</h2>
+            <div class="about-text">
+              <p>
+                Sou desenvolvedor focado em experiências simples, rápidas e
+                bonitas. Atuo Full‑Stack com atenção especial a backend,
+                performance e boas práticas. Gosto de trabalhar em parceria com
+                criativos, transformar ideias em produtos reais e documentar
+                cada passo do processo.
+              </p>
+              <p>
+                Comecei a programar por curiosidade e fui ficando cada vez mais
+                encantado com a capacidade de criar algo do nada. Hoje isso é
+                minha profissão, mas ainda mantenho aquela sensação de
+                encantamento quando um projeto sai do papel.
+              </p>
+              <p>
+                Sou estudante de
+                <strong>Sistemas de Informação na PUCPR</strong> e já coloquei
+                em prática projetos reais: plataformas de cursos, portfólios
+                para criadores de conteúdo, apps mobile com Kotlin e APIs REST
+                com Spring Java.
+              </p>
+              <p>
+                Atualmente estudando <strong>arquiteturas limpas</strong>,
+                <strong>Docker</strong>, <strong>observabilidade</strong> e como
+                escalar sistemas sem perder a cabeça. Aberto a freelas,
+                propostas e colaborações que façam sentido.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ===================== SKILLS ===================== -->
+      <section class="section" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 id="skills-title" style="margin-bottom: 1.5rem">Skills</h2>
+          <div class="grid-2">
+            <div class="skills-card">
+              <h3>Linguagens &amp; Frameworks</h3>
+              <ul class="tags" role="list">
+                <li class="tag">Java</li>
+                <li class="tag">Spring Boot</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">React</li>
+                <li class="tag">Express</li>
+                <li class="tag">Next.js</li>
+                <li class="tag">Kotlin</li>
+                <li class="tag">Jetpack Compose</li>
+                <li class="tag">HTML / CSS</li>
+              </ul>
+            </div>
+
+            <div class="skills-card">
+              <h3>Banco, DevOps &amp; Outros</h3>
+              <ul class="tags" role="list">
+                <li class="tag">MySQL</li>
+                <li class="tag">MongoDB</li>
+                <li class="tag">Supabase</li>
+                <li class="tag">Docker</li>
+                <li class="tag">Git / GitHub</li>
+                <li class="tag">REST APIs</li>
+                <li class="tag">JWT Auth</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">Linux</li>
+                <li class="tag">Cloudflare R2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ===================== EXPERIÊNCIA ===================== -->
+      <section class="section" aria-labelledby="exp-title">
+        <div class="container">
+          <div class="about-grid">
+            <h2 id="exp-title">Experiência &amp; Formação</h2>
+            <div>
+              <ol class="timeline" aria-label="Linha do tempo profissional">
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <h3>Estudante de Sistemas de Informação</h3>
+                  <time class="timeline-date" datetime="2024">2024 — 2027</time>
+                  <p class="timeline-desc">
+                    PUCPR — Cursando graduação com foco em engenharia de
+                    software, estrutura de dados e arquitetura de sistemas.
+                  </p>
+                </li>
+
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <h3>Desenvolvedor — Projetos Freelance</h3>
+                  <time class="timeline-date" datetime="2024"
+                    >2024 — presente</time
+                  >
+                  <p class="timeline-desc">
+                    Landing pages, integrações REST, painéis administrativos,
+                    plataformas de cursos e portfólios para criadores de
+                    conteúdo.
+                  </p>
+                </li>
+
+                <li class="timeline-item">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <h3>Projeto Acadêmico — App Mobile Núcleo</h3>
+                  <time class="timeline-date" datetime="2024">2024</time>
+                  <p class="timeline-desc">
+                    Desenvolvimento de API REST com Spring Boot + app Android em
+                    Kotlin/Jetpack Compose para gerenciamento de finanças
+                    pessoais.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CTA ===================== -->
+      <section class="section-alt" aria-labelledby="cta-sobre-title">
+        <div class="container" style="text-align: center">
+          <h2 id="cta-sobre-title">Quer trabalhar juntos?</h2>
+          <p
+            style="
+              color: var(--color-muted);
+              margin-top: 0.75rem;
+              margin-bottom: 1.5rem;
+              max-width: 40ch;
+              margin-inline: auto;
+            "
+          >
+            Estou sempre aberto a projetos interessantes e novas colaborações.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 0.75rem;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a href="mailto:jvcarvalho018@gmail.com" class="btn btn-primary"
+              >Enviar e-mail</a
+            >
+            <a href="projetos.html" class="btn btn-outline">Ver projetos</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>
+          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
+          café ☕
+        </p>
+        <a href="#" class="footer-top" aria-label="Voltar ao topo"
+          >Voltar ao topo ↑</a
+        >
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
