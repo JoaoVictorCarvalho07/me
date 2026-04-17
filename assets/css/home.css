@@ -1,0 +1,99 @@
+/*
+   HOME — PREVIEW CARDS
+*/
+.preview-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .preview-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.preview-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: 1.5rem;
+  background-color: var(--color-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.preview-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-accent) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.preview-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-soft);
+}
+
+.preview-card:hover::before {
+  opacity: 0.04;
+}
+
+.preview-card-icon {
+  font-size: 1.75rem;
+}
+.preview-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.preview-card p {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  flex: 1;
+}
+
+.preview-card-arrow {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/*titulo de sub-paginas*/
+.page-header {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 3rem;
+}
+
+.page-header .eyebrow {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  color: var(--color-muted);
+  max-width: 52ch;
+  font-size: 1.0625rem;
+}
