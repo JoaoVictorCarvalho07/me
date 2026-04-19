@@ -1,0 +1,19 @@
+.about-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.about-text {
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.about-text p + p {
+  margin-top: 1rem;
+}
