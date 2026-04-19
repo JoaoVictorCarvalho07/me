@@ -86,15 +86,6 @@
           </button>
         </div>
       </div>
-      <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
-        <div class="container">
-          <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
-          <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
-          <a href="blog.html" onclick="closeMobileNav()">Blog</a>
-          <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
-          <a href="agora.html" onclick="closeMobileNav()">Agora</a>
-        </div>
-      </nav>
     </header>
 
     <!-- ===================== MAIN ===================== -->
@@ -283,8 +274,40 @@
         >
       </div>
     </footer>
-
+    <!-- Nav mobile -->
+    <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+      <div class="container">
+        <button
+          class="btn-icon btn-hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          onclick="toggleMobileNav()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+        <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+        <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+        <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+        <a href="agora.html" onclick="closeMobileNav()">Agora</a>
+      </div>
+    </nav>
+    <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/mobileNav.js"></script>
   </body>
 </html>
