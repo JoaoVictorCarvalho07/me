@@ -366,7 +366,7 @@ strong {
   position: fixed;
   top: 0;
   right: 0;
-  width: 280px;
+  width: 50vw;
   height: 100vh;
   background-color: var(--color-bg);
 
