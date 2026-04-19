@@ -1,0 +1,205 @@
+.contact-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  max-width: 36rem;
+}
+
+@media (min-width: 480px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card de rede social */
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.375rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  background-color: var(--color-card);
+  text-decoration: none;
+  color: var(--color-text);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Cores por rede */
+.social-card[data-network="github"]:hover {
+  border-color: #6e40c9;
+}
+.social-card[data-network="github"]::before {
+  background: linear-gradient(135deg, #6e40c9, transparent);
+}
+
+.social-card[data-network="linkedin"]:hover {
+  border-color: #0a66c2;
+}
+.social-card[data-network="linkedin"]::before {
+  background: linear-gradient(135deg, #0a66c2, transparent);
+}
+
+.social-card[data-network="instagram"]:hover {
+  border-color: #e1306c;
+}
+.social-card[data-network="instagram"]::before {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #515bd4);
+}
+
+.social-card[data-network="whatsapp"]:hover {
+  border-color: #25d366;
+}
+.social-card[data-network="whatsapp"]::before {
+  background: linear-gradient(135deg, #25d366, transparent);
+}
+
+.social-card[data-network="email"]:hover {
+  border-color: var(--color-accent);
+}
+.social-card[data-network="email"]::before {
+  background: linear-gradient(135deg, var(--color-accent), transparent);
+}
+
+.social-card:hover::before {
+  opacity: 0.06;
+}
+
+/* Ícone wrapper */
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.social-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.social-icon--github {
+  background: #161b22;
+  color: #fff;
+}
+.social-icon--linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+.social-icon--instagram {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #515bd4);
+  color: #fff;
+}
+.social-icon--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+.social-icon--email {
+  background: var(--color-accent-2);
+  color: #fff;
+}
+
+.social-info {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.social-info strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.social-info span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: 0.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.social-arrow {
+  margin-left: auto;
+  color: var(--color-muted);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 0.875rem;
+  transition:
+    transform 150ms ease,
+    color 150ms ease;
+}
+
+.social-card:hover .social-arrow {
+  transform: translateX(3px);
+  color: var(--color-text);
+}
+
+/* Disponibilidade */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #16a34a;
+  margin-bottom: 2rem;
+}
+
+.dark .availability-badge {
+  background: rgba(34, 197, 94, 0.08);
+  color: #4ade80;
+}
+
+.availability-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+}
