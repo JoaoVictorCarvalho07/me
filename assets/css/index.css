@@ -230,6 +230,7 @@ strong {
    HEADER / NAV
    ============================================ */
 .site-header {
+  z-index: 900;
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.75);
