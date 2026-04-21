@@ -97,3 +97,8 @@
   max-width: 52ch;
   font-size: 1.0625rem;
 }
+
+.hero-img-object-fit {
+  object-fit: cover;
+  object-position: 0% 15%;
+}
