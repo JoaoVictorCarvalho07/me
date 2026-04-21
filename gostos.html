@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gostos — João Victor Carvalho</title>
+    <meta
+      name="description"
+      content="O que João Victor gosta fora do código — música, séries, livros e referências que inspiram."
+    />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/gostos.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+  <body>
+    <script src="assets/js/theme.js"></script>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a
+          href="index.html"
+          class="site-logo"
+          aria-label="João Victor — Início"
+        >
+          joao.dev<span>()</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="blog.html">Blog</a>
+          <a href="gostos.html">Gostos</a>
+          <a href="agora.html">Agora</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="btn-icon"
+            aria-label="Alternar tema"
+            onclick="toggleTheme()"
+          >
+            <svg
+              class="icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
+              />
+            </svg>
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-icon btn-hamburger"
+            aria-label="Abrir menu"
+            onclick="toggleMobileNav()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="container">
+          <p class="eyebrow">Mundo pessoal</p>
+          <h1>Gostos &amp; Referências</h1>
+          <p>
+            O que me alimenta fora do código — músicas, séries, podcasts e
+            coisas que influenciam como eu penso e crio.
+          </p>
+        </div>
+      </div>
+
+      <section class="section" aria-label="Interesses pessoais">
+        <div class="container">
+          <!--  
+               MÚSICA
+
+             Para adicionar um item:
+             <div class="taste-item" role="listitem">
+               <div class="taste-item-cover">🎵</div>
+               <div class="taste-item-info">
+                 <span class="taste-item-title">Nome do Álbum</span>
+                 <span class="taste-item-sub">Artista • Ano</span>
+               </div>
+               <span class="taste-item-badge">Álbum</span>
+             </div>
+
+             Com link substituir o taste-item por:
+             <a class="taste-item" href="URL" target="_blank" rel="noreferrer" role="listitem">
+
+             Com imagem de capa:
+             <div class="taste-item-cover"><img src="URL" alt="Capa" /></div>
+
+             Badges sugeridos: Álbum • EP • Artista • Playlist
+              -->
+          <div class="taste-section">
+            <div class="taste-header">
+              <h2>🎵 Música</h2>
+            </div>
+
+            <div class="taste-genres" role="list" aria-label="Gêneros musicais">
+              <span class="tag" role="listitem">Musical</span>
+              <span class="tag" role="listitem">Rock alternativo</span>
+              <span class="tag" role="listitem">Pop Rock </span>
+              <span class="tag" role="listitem">Pop</span>
+              <span class="tag" role="listitem">Lo-fi / Chillhop</span>
+            </div>
+
+            <p class="taste-examples-label">Álbuns &amp; artistas favoritos</p>
+
+            <div class="taste-examples" role="list">
+              <!--álbuns e artistas aqui -->
+
+              <!-- Epic the musical -->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://open.spotify.com/playlist/3sdEH7HfFE3d4xry5RnnLr?si=826710ef870d4832"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://static.wikia.nocookie.net/epicthemusical/images/3/3e/Epic_The_Musical_Album_Cover.png/revision/latest?cb=20241230083621"
+                    alt="Capa"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Epic the musical</span>
+                  <span class="taste-item-sub"
+                    >Jorge Rivera-Herrans • 2024</span
+                  >
+                </div>
+                <span class="taste-item-badge">Álbum</span>
+              </a>
+
+              <!-- Linkin Park -->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://open.spotify.com/intl-pt/artist/6XyY86QOPPrYVGvF9ch6wz?si=CM9l_GNJRKuCzYVZrd6GFQ"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Linkin_Park_logo_2014.jpg"
+                    alt="Capa"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Linkin Park</span>
+                  <span class="taste-item-sub">Linkin Park • 2000</span>
+                </div>
+                <span class="taste-item-badge">Artista</span></a
+              >
+              <!--Musica fav atual-->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://open.spotify.com/intl-pt/track/2oNYsdCasRRlz1shXFAz7D?si=cbb6973417274aae"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/pt/c/c9/Linkin_Park_-_Living_Things.jpg"
+                    alt="Capa"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Lost in the echo</span>
+                  <span class="taste-item-sub">Linkin Park • 2012</span>
+                </div>
+                <span class="taste-item-badge">Música</span>
+              </a>
+
+              <!-- Skillet -->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://open.spotify.com/intl-pt/artist/49bzE5vRBRIota4qeHtQM8?si=sHe3pig_R3O1xmYDoXBoBw"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://fontmeme.com/images/rise-skillet-album.jpg"
+                    alt="Capa"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Skillet</span>
+                  <span class="taste-item-sub">Skillet • 1996</span>
+                </div>
+                <span class="taste-item-badge">Artista</span>
+              </a>
+
+              <!--Lofi girl-->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=98a64be2005d497f"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/580fbaac440243d8731ffc57/46cb49b3-63d7-40e1-9cd0-540fbecdc39c/Lofi+Girl+16x9.jpeg"
+                    alt="Capa"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Lofi girl</span>
+                  <span class="taste-item-sub"
+                    >lofi girl - beats to relax/study to</span
+                  >
+                </div>
+                <span class="taste-item-badge">álbum</span>
+              </a>
+
+              <!--Minha No Repeat-->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://open.spotify.com/playlist/37i9dQZF1Epl8bTz2FTAZG?si=299c47df49604e14"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/repeat/or/es"
+                    alt="Capa"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Meu No Repeat</span>
+                  <span class="taste-item-sub"
+                    >álbum no repeat autometico spotify</span
+                  >
+                </div>
+                <span class="taste-item-badge">álbum</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ══════════════════════════════════════
+             🎬  SÉRIES & FILMES
+
+             Badges sugeridos: Série • Filme • Documentário
+             Plataformas: Netflix • Prime • HBO • Disney+
+             ══════════════════════════════════════ -->
+          <div class="taste-section">
+            <div class="taste-header">
+              <h2>🎬 Séries &amp; Filmes &amp; Animes</h2>
+            </div>
+
+            <div
+              class="taste-genres"
+              role="list"
+              aria-label="Gêneros de séries e filmes"
+            >
+              <span class="tag" role="listitem">ação</span>
+              <span class="tag" role="listitem">aventura</span>
+              <span class="tag" role="listitem">Tecnologia</span>
+              <span class="tag" role="listitem">Drama</span>
+              <span class="tag" role="listitem">Ficção científica</span>
+              <span class="tag" role="listitem">Animes</span>
+            </div>
+
+            <p class="taste-examples-label">O que assisti e recomendo</p>
+            <div class="taste-examples" role="list">
+              <!-- That time I got reincarnated as a slime -->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://www.crunchyroll.com/pt-br/series/GYZJ43JMR/that-time-i-got-reincarnated-as-a-slime"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://pbs.twimg.com/media/EyrFJTqW8AIjTJr.jpg"
+                    alt="tensei shitara slime data ken"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title"
+                    >That time i got reincarnated as a slime</span
+                  >
+                  <span class="taste-item-sub">Crunchyroll • 2018</span>
+                </div>
+                <span class="taste-item-badge">Anime</span>
+              </a>
+
+              <!-- avatar aang-->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://www.netflix.com/search?q=avatar%20&jbv=70142405"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/pt/8/86/Avatar_Aang.png"
+                    alt="Avatar Aang"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title"
+                    >Avatar: The Last Airbender</span
+                  >
+
+                  <span class="taste-item-sub">Netflix • 2005</span>
+                </div>
+                <span class="taste-item-badge">Série</span>
+              </a>
+
+              <!-- how to train your dragon-->
+              <a
+                class="taste-item"
+                role="listitem"
+                href="https://www.primevideo.com/-/pt/detail/0M6IL90MHWOVU4BTTNA1WM06Z1/ref=atv_dp_amz_c_yxuuUK_2_1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/pt/e/ed/How_to_Train_Your_Dragon_%28filme_de_2010%29.jpg"
+                    alt="How to Train Your Dragon"
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">How to Train Your Dragon</span>
+
+                  <span class="taste-item-sub">Prime Video • 2010</span>
+                </div>
+                <span class="taste-item-badge">Filme</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ══════════════════════════════════════
+             📚  LEITURAS
+
+             Badges sugeridos: Lendo • Lido • Na fila
+             ══════════════════════════════════════ -->
+          <div class="taste-section">
+            <div class="taste-header">
+              <h2>📚 Leituras</h2>
+            </div>
+
+            <div
+              class="taste-genres"
+              role="list"
+              aria-label="Categorias de leitura"
+            >
+              <span class="tag" role="listitem">fantasia</span>
+              <span class="tag" role="listitem">Ficção científica</span>
+            </div>
+
+            <p class="taste-examples-label">Obras que li e recomendo</p>
+            <div class="taste-examples" role="list">
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://static.wikia.nocookie.net/thebate/images/c/c6/Tapas_Novel_Cover.png/revision/latest?cb=20200209071556"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title"
+                    >The Beginning After the End</span
+                  >
+                  <span class="taste-item-sub">TurtleMe </span>
+                </div>
+                <span class="taste-item-badge">Lido</span>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://img.wattpad.com/cover/380279556-288-k29662.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Shadow slave</span>
+                  <span class="taste-item-sub">Guiltythree </span>
+                </div>
+                <span class="taste-item-badge">Lendo</span>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://rlemay.com.au/wp-content/uploads/2024/04/primal-hunter-feature.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">The primal hunter</span>
+                  <span class="taste-item-sub">Zogarth </span>
+                </div>
+                <span class="taste-item-badge">Acompanhando</span>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://pbs.twimg.com/media/EyrFJTqW8AIjTJr.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title"
+                    >That time i got reincarnated as a slime</span
+                  >
+                  <span class="taste-item-sub">Fuse</span>
+                </div>
+                <span class="taste-item-badge">Lido</span>
+              </div>
+
+              <!--  template para adicionar livros -->
+              <!-- <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">📖</div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Adicione um livro</span>
+                  <span class="taste-item-sub">Autor</span>
+                </div>
+                <span class="taste-item-badge">Na fila</span>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- ══════════════════════════════════════
+             🎮  JOGOS
+
+             Badges sugeridos: PC • Mobile • Console • Indie
+             ══════════════════════════════════════ -->
+          <div class="taste-section">
+            <div class="taste-header">
+              <h2>🎮 Jogos</h2>
+            </div>
+
+            <div class="taste-genres" role="list" aria-label="Gêneros de jogos">
+              <span class="tag" role="listitem">RPG</span>
+              <span class="tag" role="listitem">Puzzle / Strategy</span>
+              <span class="tag" role="listitem">Ação &amp; Aventura</span>
+              <span class="tag" role="listitem">moba</span>
+            </div>
+
+            <p class="taste-examples-label">Jogos que marcaram</p>
+            <div class="taste-examples" role="list">
+              <!-- Adicione jogos aqui -->
+              <!-- <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">🎮</div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Adicione um jogo</span>
+                  <span class="taste-item-sub">Plataforma • Ano</span>
+                </div>
+                <span class="taste-item-badge">PC</span>
+              </div> -->
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScT0lB7ecC8AIDqxePWYHnx1FNdt2QDSj6Jw&s"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">League of Legends</span>
+                  <span class="taste-item-sub"></span>
+                </div>
+                <span class="taste-item-badge">PC</span>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDrTWLRoJL-Pm7bNEN2rW8dFF8tqrYuxM_AA&s"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Minecraft</span>
+                  <span class="taste-item-sub"></span>
+                </div>
+                <span class="taste-item-badge">PC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ══════════════════════════════════════
+             🛠️  FERRAMENTAS
+
+             Sem gêneros — direto para a lista
+             ══════════════════════════════════════ -->
+          <div class="taste-section">
+            <div class="taste-header">
+              <h2>🛠️ Ferramentas que uso todo dia</h2>
+            </div>
+
+            <div class="taste-examples" role="list">
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="
+                  https://camo.githubusercontent.com/9e3ef7033f3d523a7cbbb5dc7c0f8298982febbd4a9d47c2d50647e7baffa558/68747470733a2f2f636f64652e76697375616c73747564696f2e636f6d2f6173736574732f757064617465732f315f33352f6c6f676f2d737461626c652e706e67"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">VS Code</span>
+                  <span class="taste-item-sub">Editor principal</span>
+                </div>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAh-3QW_x3jJ5VpUskNQn0-uh-NUNqk53QrA&s"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">GitHub</span>
+                  <span class="taste-item-sub">Versionamento</span>
+                </div>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOMSxeY0KUQ8uqzNitQ_fp8Y_wnd45OsSieQ&s"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">intellij</span>
+                  <span class="taste-item-sub">IDE Java</span>
+                </div>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://forum.obsidian.md/uploads/default/original/2X/b/b0c1ac65c3b9c3c94389bbfa5466dae781e06d85.png"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Obsidian</span>
+                  <span class="taste-item-sub">Notas &amp; conhecimento</span>
+                </div>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://img.utdstc.com/icon/f06/c8d/f06c8dd977118107909fd81a376fed319f134df8674bfc329b9dd7a4d8b01098:200"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Claude </span>
+                  <span class="taste-item-sub">IA for code</span>
+                </div>
+              </div>
+
+              <div class="taste-item" role="listitem">
+                <div class="taste-item-cover" aria-hidden="true">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Gemini_icon_2025.svg/250px-Google_Gemini_icon_2025.svg.png"
+                    alt=""
+                  />
+                </div>
+                <div class="taste-item-info">
+                  <span class="taste-item-title">Gemini </span>
+                  <span class="taste-item-sub">IA for the day</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nota pessoal -->
+          <div
+            style="
+              padding: 1.5rem;
+              border: 1px solid var(--color-border);
+              border-radius: var(--radius-2xl);
+              background: var(--color-card);
+              max-width: 52ch;
+            "
+          >
+            <p
+              style="
+                font-size: 0.9375rem;
+                color: var(--color-muted);
+                line-height: 1.8;
+              "
+            >
+              <strong style="color: var(--color-text)">Nota pessoal:</strong>
+              Esta página vai crescendo com o tempo. Se você tem sugestões de
+              música, livro ou série, manda mensagem no insta. Adoro descobrir
+              coisas novas. 👇
+            </p>
+            <div style="margin-top: 1rem">
+              <a
+                href="https://instagram.com/jventediado"
+                target="_blank"
+                rel="noreferrer"
+                class="btn btn-sm btn-primary"
+                >instagram</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>
+          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
+          café ☕
+        </p>
+        <a href="#" class="footer-top" aria-label="Voltar ao topo"
+          >Voltar ao topo ↑</a
+        >
+      </div>
+    </footer>
+    <!-- Nav mobile -->
+    <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+      <div class="container">
+        <button
+          class="btn-icon btn-hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          onclick="toggleMobileNav()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+        <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+        <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+        <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+        <a href="agora.html" onclick="closeMobileNav()">Agora</a>
+        <a href="contato.html" onclick="closeMobileNav()">Contato</a>
+      </div>
+    </nav>
+    <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/mobileNav.js"></script>
+  </body>
+</html>

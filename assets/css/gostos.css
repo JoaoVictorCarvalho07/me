@@ -1,0 +1,173 @@
+/* ============================================
+   GOSTOS (INTERESSES)
+   ============================================ */
+.interest-section {
+  margin-bottom: 3rem;
+}
+
+.interest-section h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.interest-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
+.interest-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  background-color: var(--color-card);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.interest-item:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.interest-item-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── Seção de categoria ── */
+.taste-section {
+  margin-bottom: 3.5rem;
+}
+
+.taste-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.taste-header h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Tags de gênero */
+.taste-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Label "Favoritos" */
+.taste-examples-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  margin-bottom: 0.875rem;
+  font-weight: 600;
+}
+
+/* Grid de exemplos */
+.taste-examples {
+  display: grid;
+  gap: 0.625rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+/* Card de item */
+.taste-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-card);
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.taste-item:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.08);
+}
+
+a.taste-item:hover .taste-item-title {
+  color: var(--color-accent);
+}
+
+/* Capa */
+.taste-item-cover {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  background-color: var(--color-surface-2);
+  overflow: hidden;
+}
+
+.taste-item-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto */
+.taste-item-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.taste-item-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  transition: color 150ms ease;
+}
+
+.taste-item-sub {
+  font-size: 0.775rem;
+  color: var(--color-muted);
+  margin-top: 0.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* Badge */
+.taste-item-badge {
+  font-size: 0.6875rem;
+  padding: 0.175rem 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-surface-2);
+  color: var(--color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-top: 0.1rem;
+}

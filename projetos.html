@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projetos — João Victor Carvalho</title>
+    <meta
+      name="description"
+      content="Projetos desenvolvidos por João Victor Carvalho — aplicações web, mobile e APIs com Java, React, Node.js e mais."
+    />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/projetos.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+  <body>
+    <script src="assets/js/theme.js"></script>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a
+          href="index.html"
+          class="site-logo"
+          aria-label="João Victor — Início"
+        >
+          joao.dev<span>()</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="blog.html">Blog</a>
+          <a href="gostos.html">Gostos</a>
+          <a href="agora.html">Agora</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="btn-icon"
+            aria-label="Alternar tema"
+            onclick="toggleTheme()"
+          >
+            <svg
+              class="icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
+              />
+            </svg>
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-icon btn-hamburger"
+            aria-label="Abrir menu"
+            onclick="toggleMobileNav()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="container">
+          <p class="eyebrow">Portfólio</p>
+          <h1>Projetos</h1>
+          <p>
+            Aplicações reais que constroí — desde plataformas com Java/Spring
+            até apps mobile em Kotlin e frontends em React.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===================== PROJETOS GRID ===================== -->
+      <section class="section" aria-labelledby="projetos-title">
+        <div class="container">
+          <!-- Filtros -->
+          <div
+            class="filter-tabs"
+            role="group"
+            aria-label="Filtrar projetos por tecnologia"
+          >
+            <button class="filter-tab active" data-filter="todos">Todos</button>
+            <button class="filter-tab" data-filter="react">React</button>
+            <button class="filter-tab" data-filter="java">Java</button>
+            <button class="filter-tab" data-filter="mobile">Mobile</button>
+            <button class="filter-tab" data-filter="fullstack">
+              Full-Stack
+            </button>
+          </div>
+
+          <!-- Grid de projetos -->
+          <div class="grid-3" role="list">
+            <!-- TODO App -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-tags="react, typescript, frontend"
+              onclick="openModal('./public/ToDoApp.png')"
+              tabindex="0"
+              aria-label="Projeto: TODO app — clique para ver screenshot"
+              onkeydown="
+                if (event.key === 'Enter') openModal('./public/ToDoApp.png');
+              "
+            >
+              <img
+                class="project-card-img"
+                src="./public/ToDoApp.png"
+                alt="Screenshot do TODO app"
+                loading="lazy"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop'
+                "
+              />
+              <div class="project-card-body">
+                <h3>TODO App</h3>
+                <p class="project-card-desc">
+                  Lista de tarefas com funcionalidades de adicionar, editar,
+                  excluir e marcar como concluída. Código limpo com TypeScript.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">React</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">Tailwind</li>
+                </ul>
+                <div class="project-card-actions">
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/todo_app"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Plataforma Cursos -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-tags="react, java, fullstack, spring"
+              onclick="openModalx('./public/VideoAula.png')"
+              tabindex="0"
+              aria-label="Projeto: Plataforma de Cursos — clique para ver screenshot"
+              onkeydown="
+                if (event.key === 'Enter') openModal('./public/VideoAula.png');
+              "
+            >
+              <img
+                class="project-card-img"
+                src="./public/VideoAula.png"
+                alt="Screenshot da plataforma de cursos"
+                loading="lazy"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop'
+                "
+              />
+              <div class="project-card-body">
+                <h3>Plataforma de Cursos</h3>
+                <p class="project-card-desc">
+                  Upload de cursos em vídeo estilo Alura/Rocketseat. Backend
+                  Java com autenticação JWT, Supabase para vídeos e frontend
+                  ReactJS.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">React</li>
+                  <li class="tag">Java</li>
+                  <li class="tag">Spring Boot</li>
+                  <li class="tag">JWT</li>
+                  <li class="tag">Supabase</li>
+                </ul>
+                <div class="project-card-actions">
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/CursosFront"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Frontend</a
+                  >
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/cursosback"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Backend</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Mídia Kit -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-tags="react, typescript, frontend, cloudflare"
+              onclick="openModal('./public/MidiaKit.png')"
+              tabindex="0"
+              aria-label="Projeto: Mídia Kit UGC — clique para ver screenshot"
+              onkeydown="
+                if (event.key === 'Enter') openModal('./public/MidiaKit.png');
+              "
+            >
+              <img
+                class="project-card-img"
+                src="./public/MidiaKit.png"
+                alt="Screenshot do Mídia Kit UGC"
+                loading="lazy"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=800&auto=format&fit=crop'
+                "
+              />
+              <div class="project-card-body">
+                <h3>Mídia Kit UGC</h3>
+                <p class="project-card-desc">
+                  Portfólio dinâmico para criadores de conteúdo UGC. Arquivos
+                  salvos no Cloudflare R2.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">javascript</li>
+                  <li class="tag">Cloudflare R2</li>
+                </ul>
+                <div class="project-card-actions">
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/Midiakit_isabelPontes"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    class="btn btn-sm btn-outline"
+                    href="https://xn--isabelpontesportflio-r8b.com.br/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Site ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Site Isabel Pontes -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-tags="react, typescript, frontend, fullstack"
+              onclick="openModal('./public/siteIsabelPontes.png')"
+              tabindex="0"
+              aria-label="Projeto: Site Isabel Pontes — clique para ver screenshot"
+              onkeydown="
+                if (event.key === 'Enter')
+                  openModal('./public/siteIsabelPontes.png');
+              "
+            >
+              <img
+                class="project-card-img"
+                src="./public/siteIsabelPontes.png"
+                alt="Screenshot do site Isabel Pontes"
+                loading="lazy"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop'
+                "
+              />
+              <div class="project-card-body">
+                <h3>Site Isabel Pontes</h3>
+                <p class="project-card-desc">
+                  Portfólio completo para fotógrafa e criadora de conteúdo.
+                  Páginas de sobre, contato e galeria. React + Vite + Tailwind +
+                  ShadCN + Cloudflare R2.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">React</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">ShadCN</li>
+                  <li class="tag">Cloudflare R2</li>
+                </ul>
+                <div class="project-card-actions">
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/SiteIsabelPontes"
+                    target="_blank"
+                    rel="noreferrer"
+                    >GitHub</a
+                  >
+                  <a
+                    class="btn btn-sm btn-outline"
+                    href="https://isabelPontes.com.br/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Site ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Núcleo -->
+            <article
+              class="project-card"
+              role="listitem"
+              data-tags="java, mobile, kotlin, spring, fullstack"
+              onclick="openModal('./public/nucleo.png')"
+              tabindex="0"
+              aria-label="Projeto: Núcleo — clique para ver screenshot"
+              onkeydown="
+                if (event.key === 'Enter') openModal('./public/nucleo.png');
+              "
+            >
+              <img
+                class="project-card-img"
+                src="./public/nucleo.png"
+                alt="Screenshot do app Núcleo"
+                loading="lazy"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=800&auto=format&fit=crop'
+                "
+              />
+              <div class="project-card-body">
+                <h3>Núcleo</h3>
+                <p class="project-card-desc">
+                  App mobile de gerenciamento de finanças. Projeto acadêmico com
+                  API REST em Spring Java + JWT + MySQL e app Android em Kotlin
+                  com Jetpack Compose.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">Kotlin</li>
+                  <li class="tag">Jetpack Compose</li>
+                  <li class="tag">Java</li>
+                  <li class="tag">Spring Boot</li>
+                  <li class="tag">JWT</li>
+                  <li class="tag">MySQL</li>
+                </ul>
+                <div class="project-card-actions">
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/Nucleo"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Backend</a
+                  >
+                  <a
+                    class="btn btn-sm btn-dark"
+                    href="https://github.com/JoaoVictorCarvalho07/Nucleo-Mobile"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Mobile</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Link GitHub -->
+          <div style="text-align: center; margin-top: 3rem">
+            <a
+              href="https://github.com/JoaoVictorCarvalho07?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              class="btn btn-outline"
+            >
+              Ver todos no GitHub
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="width: 1rem; height: 1rem"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Screenshot do projeto"
+      onclick="closeModal()"
+    >
+      <div class="modal-inner" onclick="event.stopPropagation()">
+        <button
+          class="modal-close"
+          onclick="closeModal()"
+          aria-label="Fechar lightbox"
+        >
+          ✕
+        </button>
+        <img
+          id="modalImg"
+          class="modal-img"
+          alt="Screenshot ampliado do projeto"
+        />
+      </div>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>
+          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
+          café ☕
+        </p>
+        <a href="#" class="footer-top" aria-label="Voltar ao topo"
+          >Voltar ao topo ↑</a
+        >
+      </div>
+    </footer>
+
+    <!-- Nav mobile -->
+    <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+      <div class="container">
+        <button
+          class="btn-icon btn-hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          onclick="toggleMobileNav()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+        <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+        <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+        <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+        <a href="agora.html" onclick="closeMobileNav()">Agora</a>
+        <a href="contato.html" onclick="closeMobileNav()">Contato</a>
+      </div>
+    </nav>
+    <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ModalControl.js"></script>
+    <script src="assets/js/mobileNav.js"></script>
+    <script src="assets/js/filtroProjetos.js"></script>
+  </body>
+</html>

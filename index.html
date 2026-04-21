@@ -1,889 +1,363 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth" data-theme>
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>João Victor Carvalho — Desenvolvedor</title>
+    <title>João Victor Carvalho — Dev Full-Stack</title>
     <meta
       name="description"
-      content="Portfólio pessoal do João Victor Carvalho — desenvolvedor de software. Projetos, experiência, habilidades e contato."
+      content="Portfólio pessoal do João Victor Carvalho — desenvolvedor Full-Stack. Projetos, experiência, skills e muito mais."
     />
-    <meta property="og:title" content="João Victor Carvalho — Desenvolvedor" />
+    <meta property="og:title" content="João Victor Carvalho — Dev Full-Stack" />
     <meta
       property="og:description"
-      content="Portfólio pessoal do João Victor Carvalho — desenvolvedor de software. Projetos, experiência, habilidades e contato."
+      content="Desenvolvedor Full-Stack apaixonado por Java, Node.js e React."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop"
-    />
     <meta name="theme-color" content="#0ea5e9" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
-            boxShadow: { soft: "0 10px 30px rgba(2,6,23,0.08)" },
-          },
-        },
-      };
-    </script>
-    <style>
-      :root {
-        color-scheme: light dark;
-      }
-      body {
-        font-feature-settings: "liga" 1, "calt" 1;
-      }
-    </style>
-
-  
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
   </head>
-  <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-    <!-- NAV -->
-    <header
-      class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-800"
-    >
-      <div
-        class="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between h-16"
-      >
-        <a href="#home" class="font-extrabold tracking-tight text-xl"
-          >joao.dev<span class="text-sky-500">()</span></a
+  <body>
+    <script src="assets/js/theme.js"></script>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a
+          href="index.html"
+          class="site-logo"
+          aria-label="João Victor — Início"
         >
-        <nav class="hidden md:flex gap-6 text-sm">
-          <a href="#sobre" class="hover:text-sky-600">Sobre</a>
-          <a href="#skills" class="hover:text-sky-600">Skills</a>
-          <a href="#projetos" class="hover:text-sky-600">Projetos</a>
-          <a href="#experiencia" class="hover:text-sky-600">Experiência</a>
-          <a href="#contato" class="hover:text-sky-600">Contato</a>
+          joao.dev<span>()</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="blog.html">Blog</a>
+          <a href="gostos.html">Gostos</a>
+          <a href="agora.html">Agora</a>
         </nav>
-        <div class="flex items-center gap-2">
+
+        <div class="header-actions">
           <button
-            aria-label="Alternar tema"
-            class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"
+            class="btn-icon"
+            aria-label="Alternar tema claro/escuro"
             onclick="toggleTheme()"
           >
+            <!-- Lua (modo claro) -->
             <svg
-              id="icon-sun"
+              class="icon-moon"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 hidden dark:block"
               viewBox="0 0 24 24"
               fill="currentColor"
-            >
-              <path
-                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
-              />
-            </svg>
-            <svg
-              id="icon-moon"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 dark:hidden"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+              aria-hidden="true"
             >
               <path
                 d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
               />
             </svg>
+            <!-- Sol (modo escuro) -->
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+              />
+            </svg>
           </button>
+
           <button
-            class="md:hidden p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"
-            onclick="document.getElementById('mobileNav').classList.toggle('hidden')"
+            class="btn-icon btn-hamburger"
             aria-label="Abrir menu"
+            aria-expanded="false"
+            onclick="toggleMobileNav()"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
               viewBox="0 0 24 24"
+              fill="none"
               stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
             </svg>
           </button>
         </div>
       </div>
-      <div
-        id="mobileNav"
-        class="md:hidden hidden border-t border-slate-200 dark:border-slate-800"
-      >
-        <div class="px-4 py-3 flex flex-col gap-3 text-sm">
-          <a href="#sobre" onclick="closeMobile()">Sobre</a>
-          <a href="#skills" onclick="closeMobile()">Skills</a>
-          <a href="#projetos" onclick="closeMobile()">Projetos</a>
-          <a href="#experiencia" onclick="closeMobile()">Experiência</a>
-          <a href="#contato" onclick="closeMobile()">Contato</a>
-        </div>
-      </div>
     </header>
 
-    <!-- HERO -->
-    <section id="home" class="relative">
-      <div
-        class="max-w-6xl mx-auto px-4 md:px-6 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center"
-      >
-        <div>
-          <p
-            class="uppercase tracking-widest text-xs text-slate-500 dark:text-slate-400 mb-3"
-          >
-            Olá, eu sou
-          </p>
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            João Victor Carvalho
-            <span class="text-sky-500">— Dev Full‑Stack</span>
-          </h1>
-          <p class="mt-6 text-slate-600 dark:text-slate-300 max-w-prose">
-            Construo produtos digitais performáticos e acessíveis. Gosto de
-            resolver problemas com <strong>Java</strong>,
-            <strong>JavaScript/TypeScript</strong>, <strong>Node.js</strong> e
-            <strong>React</strong>, e tenho carinho por java web e bancos de
-            dados aliados a boas práticas.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projetos"
-              class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-sky-600 text-white hover:bg-sky-700 shadow-soft"
-              >Ver projetos
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-            <a
-              href="#contato"
-              class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 hover:border-sky-500"
-              >Falar comigo</a
-            >
-            <!-- <a
-              href="#"
-              class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 hover:border-sky-500"
-              >Baixar CV</a
-            > -->
-          </div>
-          <div class="mt-6 flex items-center gap-4 text-slate-500">
-            <a
-              href="https://github.com/JoaoVictorCarvalho07"
-              target="_blank"
-              rel="noreferrer"
-              class="hover:text-sky-600"
-              aria-label="GitHub"
-            >
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.25 2.86.12 3.16.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.61-5.49 5.91.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0012 .5z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/joao-victor-carvalho-de-freitas/"
-              target="_blank"
-              rel="noreferrer"
-              class="hover:text-sky-600"
-              aria-label="LinkedIn"
-            >
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.1c.67-1.2 2.3-2.5 4.7-2.5 5 0 5.9 3.3 5.9 7.6V24h-5V15.6c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.5V24H8z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://wa.me/5592981920847"
-              target="_blank"
-              rel="noreferrer"
-              class="hover:text-sky-600"
-              aria-label="WhatsApp"
-            >
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-</svg>
-            </a>
-          </div>
-        </div>
-        <div class="relative">
-          <img
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
-            alt="Foto de capa com setup de desenvolvimento"
-            class="rounded-3xl shadow-soft"
-          />
-          <div
-            class="absolute -bottom-6 -left-6 bg-white/70 dark:bg-slate-900/60 backdrop-blur rounded-2xl p-4 shadow-soft hidden md:flex items-center gap-3"
-          >
-            <div
-              class="h-10 w-10 rounded-xl bg-gradient-to-tr from-sky-500 to-cyan-400"
-            ></div>
+    <!-- ===================== HERO ===================== -->
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Texto -->
             <div>
-              <p class="text-xs uppercase tracking-wider text-slate-500">
-                Stack atual
+              <p class="hero-eyebrow fade-up fade-up-1">Olá, eu sou</p>
+              <h1 id="hero-title" class="fade-up fade-up-2">
+                João Victor Carvalho
+                <span>— Dev Full‑Stack</span>
+              </h1>
+              <p class="hero-desc fade-up fade-up-3">
+                Construo produtos digitais performáticos e acessíveis.
+                Apaixonado por
+                <strong>Java</strong>, <strong>JavaScript/TypeScript</strong>,
+                <strong>Node.js</strong> e <strong>React</strong> — com carinho
+                especial por backend e boas práticas.
               </p>
-              <p class="font-semibold">Spring Java • MySQL</p>
+
+              <div class="hero-actions fade-up fade-up-4">
+                <a href="projetos.html" class="btn btn-primary">
+                  Ver projetos
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="sobre.html" class="btn btn-outline">Sobre mim</a>
+              </div>
+
+              <div class="hero-socials fade-up fade-up-4">
+                <a
+                  href="https://github.com/JoaoVictorCarvalho07"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.25 2.86.12 3.16.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.61-5.49 5.91.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0012 .5z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/joao-victor-carvalho-de-freitas/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.1c.67-1.2 2.3-2.5 4.7-2.5 5 0 5.9 3.3 5.9 7.6V24h-5V15.6c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.5V24H8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/5592981920847"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Imagem -->
+            <div class="hero-img-wrap">
+              <img
+                src="public/Personal_image_Hero_.jpeg"
+                alt="Setup de desenvolvimento com monitores e código"
+                loading="lazy"
+                class="hero-img-object-fit"
+              />
+              <div class="hero-badge" aria-hidden="true">
+                <div class="hero-badge-icon"></div>
+                <div>
+                  <p>Stack atual</p>
+                  <p>Spring Java • MySQL</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SOBRE -->
-    <section
-      id="sobre"
-      class="py-20 border-t border-slate-200/70 dark:border-slate-800"
-    >
-      <div class="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-10">
-        <h2 class="text-2xl md:text-3xl font-extrabold">Sobre mim</h2>
-        <div
-          class="md:col-span-2 text-slate-600 dark:text-slate-300 leading-relaxed"
-        >
-          <p>
-            Sou desenvolvedor focado em experiências simples, rápidas e bonitas.
-            Atuo Full‑Stack, acessibilidade e DX mas com atenção especial a
-            backend, performance. Gosto de trabalhar em parceria com criativos,
-            transformar ideias em produtos e documentar processos.
-          </p>
-          <p class="mt-4">
-            Atualmente estudando <strong>arquiteturas limpas</strong>,
-            <strong>Docker</strong> e <strong>observabilidade</strong>. Aberto a
-            freelas, propostas e colaborações.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-6">
-        <h2 class="text-2xl md:text-3xl font-extrabold mb-6">Skills</h2>
-        <div class="grid md:grid-cols-2 gap-10">
-          <div
-            class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800"
-          >
-            <h3 class="font-semibold mb-4">Linguagens & Frameworks</h3>
-            <ul class="flex flex-wrap gap-2 text-sm">
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Java
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Java spring
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                JavaScript
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                TypeScript
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Node.js
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                React
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Express
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Next.js
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                HTML/CSS
-              </li>
-            </ul>
-          </div>
-          <div
-            class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800"
-          >
-            <h3 class="font-semibold mb-4">Banco, DevOps & Outros</h3>
-            <ul class="flex flex-wrap gap-2 text-sm">
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                MySQL
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                MongoDB
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Docker
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Git/GitHub
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                REST APIs
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Tailwind CSS
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Linux
-              </li>
-              <li class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800">
-                Cloud
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJETOS -->
-    <section id="projetos" class="py-20 bg-slate-50 dark:bg-slate-900/30">
-      <div class="max-w-6xl mx-auto px-4 md:px-6">
-        <div class="flex items-end justify-between gap-4 mb-8">
-          <h2 class="text-2xl md:text-3xl font-extrabold">Projetos</h2>
-          <a
-            class="text-sm hover:text-sky-600"
-            href="https://github.com/JoaoVictorCarvalho07?tab=repositories"
-            target="_blank"
-            >Ver todos no GitHub →</a
-          >
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <!-- <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">Agenda Barber</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Sistema de agendamento para barbearias com Node, Express e
-                MySQL. Multi‑unidades, autenticação JWT e painel admin.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Node
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Express
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  MySQL
-                </li>
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-sky-500"
-                  href="#"
-                  target="_blank"
-                  >Demo</a
-                >
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="#"
-                  target="_blank"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </article> -->
-          <!-- Card 2 -->
-          <!-- <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">Eventos+ (CRUD)</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                App para criação e gerenciamento de eventos com upload de imagem
-                (buffer/base64), busca e avaliações.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  React
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Express
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  MySQL
-                </li>
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-sky-500"
-                  href="#"
-                  target="_blank"
-                  >Demo</a
-                >
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="#"
-                  target="_blank"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </article> -->
-          <!-- Card 3 -->
-          <!-- <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">UGC & Portfólio</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Landing com cards de portfólio dinâmicos, filtragem por tags e
-                lightbox responsivo.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Vite
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Tailwind
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  A11y
-                </li>
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-sky-500"
-                  href="#"
-                  target="_blank"
-                  >Demo</a
-                >
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="#"
-                  target="_blank"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </article> -->
-
-          <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft" onclick="openModal('./public/ToDoApp.png')"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="./public/ToDoApp.png"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">TODO app</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Aplicação simples de lista de tarefas com funcionalidades de
-                adicionar, editar, excluir e marcar como concluída.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  React
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Tailwind
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  TypeScript
-                </li>
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/todo_app"
-                  target="_blank"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </article>
-          
-
-          
-          <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft " onclick="openModal('./public/VideoAula.png')"
-          >
-          <div class="rounded-3xl border border-slate-200 dark:border-slate-800">
-            <img
-              class="h-40 w-full object-cover"
-              src="./public/VideoAula.png"
-              alt="Screenshot do projeto"
-            />
-          </div>
-
-            <div class="p-5 max-height-100">
-              <h3 class="font-semibold text-lg"> Plataforma Cursos</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Aplicação simples de upload de cursos em formato de video estilo "Alura", "Rocketseat".<br><br>
-                Backend: aplicação backend em java com autenticação para usuarios administradores usando supabase para hospedagem de videos.<br>
-                Frontend: aplicação frontend em ReactJS.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  React
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Tailwind
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  JavaScript
-                </li>
-              </ul>
-
-
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-
-                
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Java
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  springboot
-                </li> 
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  jwt
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  supabase
-                </li>
-              
-              </ul>
-
-              
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/CursosFront"
-                  target="_blank"
-                  >GitHub FrontEnd</a
-                >
-                                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/cursosback"
-                  target="_blank"
-                  >GitHub BackEnd</a
-                >
-
-              </div>
-            </div>
-          </article>
-
-
-
-          <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft" onclick="openModal('./public/MidiaKit.png')"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="./public/MidiaKit.png"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">Mídia Kit UGC</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Aplicação simples de portifólio dinâmico para criadores de conteúdo UGC.
-                Arquivos salvos em R2 da Cloudflare, frontend em React.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  React
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Tailwind
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  TypeScript
-                </li>
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/Midiakit_isabelPontes"
-                  target="_blank"
-                  >GitHub</a
-                >
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://xn--isabelpontesportflio-r8b.com.br/"
-                  target="_blank"
-                  >Site</a
-                >
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft" onclick="openModal('./public/siteIsabelPontes.png')"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="./public/siteIsabelPontes.png"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">Site completo de Isabel Pontes</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Aplicação simples de portifólio dinâmico para a fotografa e criadora de conteudo Isabel Pontes.
-                pagina de sobre, contato e galeria.
-                Arquivos salvos em R2 da Cloudflare, frontend em React(Vite,Tailwind,ShadCN).
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  React
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Tailwind
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  TypeScript
-                </li>
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/SiteIsabelPontes"
-                  target="_blank"
-                  >GitHub</a
-                >
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://isabelPontes.com.br/"
-                  target="_blank"
-                  >Site</a
-                >
-              </div>
-            </div>
-          </article>
-
-
-                    <article 
-            class="group rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900 shadow-soft" onclick="openModal('./public/nucleo.png')"
-          >
-            <img
-              class="h-40 w-full object-cover"
-              src="./public/nucleo.png"
-              alt="Screenshot do projeto"
-            />
-            <div class="p-5">
-              <h3 class="font-semibold text-lg">Nucleo</h3>
-              <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                Aplicação backend-mobile feita em projeto acadêmico para gerenciamento de financias com o intuito de aprender a criar uma API REST usando Spring Java, autenticação JWT e MySQL. Além de criar uma aplição mobile em Kotlin.
-              </p>
-              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  jetpack compose
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  kotlin
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Java
-                </li>
-                <li class="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800">
-                  Spring boot
-              </ul>
-              <div class="mt-4 flex gap-3">
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/Nucleo"
-                  target="_blank"
-                  >GitHub backend</a
-                >
-                <a
-                  class="text-sm px-3 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900"
-                  href="https://github.com/JoaoVictorCarvalho07/Nucleo-Mobile"
-                  target="_blank"
-                  >gitlab mobile</a
-                >
-
-              </div>
-            </div>
-          </article>
-
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="py-20">
-      <div class="max-w-6xl mx-auto px-4 md:px-6">
-        <h2 class="text-2xl md:text-3xl font-extrabold mb-8">Experiência</h2>
-        <ol class="relative border-s border-slate-200 dark:border-slate-800">
-          <li class="ms-6 mb-10">
-            <span
-              class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full bg-sky-500"
-            ></span>
-            <h3 class="text-lg font-semibold">
-              Estudante Sistemas de Informação — PUCPR
-            </h3>
-            <time class="block mb-2 text-sm text-slate-500">2024-2027</time>
-          </li>
-          <li class="ms-6 mb-10">
-            <span
-              class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full bg-sky-500"
-            ></span>
-            <h3 class="text-lg font-semibold">
-              Desenvolvedor — Projetos Diversos
-            </h3>
-            <time class="block mb-2 text-sm text-slate-500">2024-2025</time>
-            <p class="text-slate-600 dark:text-slate-300">
-              Landing pages, integrações REST, painéis administrativos etc.
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="py-20 bg-slate-50 dark:bg-slate-900/30">
-      <div
-        class="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-start"
-      >
-        <div>
-          <h2 class="text-2xl md:text-3xl font-extrabold">
-            Bora construir algo?
+      <!-- ===================== PREVIEW CARDS ===================== -->
+      <section class="section-alt" aria-labelledby="explore-title">
+        <div class="container">
+          <h2 id="explore-title" style="margin-bottom: 1.5rem">
+            Explore o site
           </h2>
+          <div class="preview-grid">
+            <a href="projetos.html" class="preview-card">
+              <div class="preview-card-icon" aria-hidden="true">🛠️</div>
+              <h3>Projetos</h3>
+              <p>
+                Aplicações reais com Java, React, Node e mais. Cada projeto com
+                contexto e links.
+              </p>
+              <span class="preview-card-arrow">Ver projetos →</span>
+            </a>
 
-          <ul class="mt-6 space-y-3 text-sm">
-            <li class="flex items-center gap-3">
-              <span class="i">📧</span>
-              <a
-                class="hover:text-sky-600"
-                href="mailto:jvcarvalho018@gmail.com"
-                >Email</a
-              >
+            <a href="sobre.html" class="preview-card">
+              <div class="preview-card-icon" aria-hidden="true">👋</div>
+              <h3>Sobre</h3>
+              <p>
+                Quem sou, minhas skills, experiência e trajetória acadêmica de
+                forma pessoal.
+              </p>
+              <span class="preview-card-arrow">Conhecer →</span>
+            </a>
+
+            <a href="gostos.html" class="preview-card">
+              <div class="preview-card-icon" aria-hidden="true">🎵</div>
+              <h3>Gostos</h3>
+              <p>
+                Músicas, séries, livros e coisas que me inspiram fora do mundo
+                do código.
+              </p>
+              <span class="preview-card-arrow">Explorar →</span>
+            </a>
+
+            <a href="agora.html" class="preview-card">
+              <div class="preview-card-icon" aria-hidden="true">🎯</div>
+              <h3>Agora</h3>
+              <p>
+                O que estou estudando, construindo e pensando nesse momento da
+                trajetória.
+              </p>
+              <span class="preview-card-arrow">Ver agora →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTATO RÁPIDO ===================== -->
+      <section class="section" aria-labelledby="contato-title">
+        <div class="container" style="max-width: 40rem">
+          <h2 id="contato-title">Bora construir algo? 🚀</h2>
+          <p
+            style="
+              color: var(--color-muted);
+              margin-top: 0.75rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Aberto a freelas, colaborações e boas conversas sobre tecnologia.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:jvcarvalho018@gmail.com" class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">📧</span>
+                jvcarvalho018@gmail.com
+              </a>
             </li>
-            <li class="flex items-center gap-3">
-              <span class="i">💼</span>
+            <li>
               <a
-                class="hover:text-sky-600"
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/joao-victor-carvalho-de-freitas/"
-                >LinkedIn</a
-              >
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="i">🧑‍💻</span>
-              <a
-                class="hover:text-sky-600"
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/JoaoVictorCarvalho07"
-                >GitHub</a
-              >
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="i">📲</span>
-              <a
-                class="hover:text-sky-600"
-                target="_blank"
-                rel="wa.me/5592981920847"
                 href="https://wa.me/5592981920847"
-                >WhatsApp</a
+                target="_blank"
+                rel="noreferrer"
+                class="contact-item"
               >
+                <span class="contact-item-icon" aria-hidden="true">📲</span>
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/joao-victor-carvalho-de-freitas/"
+                target="_blank"
+                rel="noreferrer"
+                class="contact-item"
+              >
+                <span class="contact-item-icon" aria-hidden="true">💼</span>
+                LinkedIn
+              </a>
             </li>
           </ul>
         </div>
+      </section>
+    </main>
 
-        <!-- <form
-          class="p-6 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-4"
-          action="https://formspree.io/f/SEU_ENDPOINT"
-          method="POST"
-        >
-          <div>
-            <label class="block text-sm mb-1" for="nome">Nome</label>
-            <input
-              id="nome"
-              name="nome"
-              required
-              class="w-full rounded-xl border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-sky-500"
-              type="text"
-              placeholder="Seu nome"
-            />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="email">E‑mail</label>
-            <input
-              id="email"
-              name="email"
-              required
-              class="w-full rounded-xl border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-sky-500"
-              type="email"
-              placeholder="seu@email.com"
-            />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="mensagem">Mensagem</label>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              rows="4"
-              required
-              class="w-full rounded-xl border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-sky-500"
-              placeholder="Me conte sobre seu projeto..."
-            ></textarea>
-          </div>
-          <button
-            class="w-full md:w-auto px-5 py-3 rounded-2xl bg-sky-600 text-white hover:bg-sky-700"
-          >
-            Enviar
-          </button>
-          <p class="text-xs text-slate-500">
-            Este formulário usa Formspree. Substitua o endpoint pelo seu.
-          </p>
-        </form> -->
-      </div>
-    </section>
-
-    <footer class="py-10">
-      <div
-        class="max-w-6xl mx-auto px-4 md:px-6 text-sm flex flex-col md:flex-row items-center justify-between gap-4"
-      >
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
         <p>
-          © <span id="year"></span> João. Feito com muito café ☕ e uma boa
-          playlist 🎶.
+          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
+          café ☕
         </p>
-          
-        </p>
-        <a class="hover:text-sky-600" href="#home">Voltar ao topo ↑</a>
+        <a href="#home" class="footer-top" aria-label="Voltar ao topo"
+          >Voltar ao topo ↑</a
+        >
       </div>
     </footer>
 
-    
-      <div id="modal" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;">
-  <div onclick="event.stopPropagation()" style="position:relative;border-radius:1rem;overflow:hidden;">
-    <button onclick="closeModal()" style="position:absolute;top:10px;right:12px;background:rgba(0,0,0,0.5);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;">✕</button>
-    <img id="modal-img" style="display:block;max-width:90vw;max-height:85vh;object-fit:contain;" />
-  </div>
-</div>
+    <!-- Nav mobile -->
+    <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+      <div class="container">
+        <button
+          class="btn-icon btn-hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          onclick="toggleMobileNav()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+        <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+        <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+        <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+        <a href="agora.html" onclick="closeMobileNav()">Agora</a>
+        <a href="contato.html" onclick="closeMobileNav()">contato</a>
+      </div>
+    </nav>
+    <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
 
-
-
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/mobileNav.js"></script>
   </body>
 </html>
