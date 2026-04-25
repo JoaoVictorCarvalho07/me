@@ -13,12 +13,40 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
+		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="assets/css/blog.css" />
 		<link rel="stylesheet" href="assets/css/home.css" />
 	</head>
 	<body>
+		<style>
+			.md-content h1,
+			.md-content h2 {
+				margin-top: 1.5rem;
+				margin-bottom: 1rem;
+				font-weight: 800;
+			}
+
+			.md-content p {
+				margin-bottom: 1rem;
+				line-height: 1.6;
+			}
+
+			.md-content ul {
+				margin-left: 1.5rem;
+				margin-bottom: 1rem;
+			}
+			.md-content {
+
+				padding: 2rem 3rem;
+				border-radius: 4px;
+				font-family: "Arial", Courier, monospace;
+			}
+		</style>
 		<script src="assets/js/theme.js"></script>
 
 		<!-- ===================== HEADER ===================== -->
@@ -91,28 +119,22 @@
 			</div>
 		</header>
 
-		<!-- ===================== MAIN ===================== -->
 		<main>
-			<!-- Page header -->
-			<div class="page-header">
+			<article class="post-article section">
 				<div class="container">
-					<p class="eyebrow">Escrita</p>
-					<h1>Blog</h1>
-					<p>
-						Textos sobre desenvolvimento, aprendizados, erros cometidos e
-						reflexões honestas sobre a carreira.
-					</p>
-				</div>
-			</div>
+					<header class="post-header">
+						<p id="post-date" class="eyebrow"></p>
+						<h1 id="post-title">Carregando...</h1>
+						<div id="post-tags" class="tags-container"></div>
+					</header>
 
-			<section class="section" aria-labelledby="blog-title">
-				<div class="container">
-					<div id="blog-grid" class="blog-grid-container"></div>
+					<div
+						id="post-content"
+						class="md-content markdown-body md-content-coder"
+					></div>
 				</div>
-			</section>
+			</article>
 		</main>
-
-		<!-- ===================== FOOTER ===================== -->
 		<footer class="site-footer" role="contentinfo">
 			<div class="container">
 				<p>
@@ -124,43 +146,8 @@
 				>
 			</div>
 		</footer>
-		<!-- Nav mobile -->
-		<nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
-			<div class="container">
-				<button
-					class="btn-icon btn-hamburger"
-					aria-label="Abrir menu"
-					aria-expanded="false"
-					onclick="toggleMobileNav()"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						aria-hidden="true"
-					>
-						<line x1="4" y1="6" x2="20" y2="6" />
-						<line x1="4" y1="12" x2="20" y2="12" />
-						<line x1="4" y1="18" x2="20" y2="18" />
-					</svg>
-				</button>
-				<a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
-				<a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
-				<a href="blog.html" onclick="closeMobileNav()">Blog</a>
-				<a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
-				<a href="agora.html" onclick="closeMobileNav()">Agora</a>
-				<a href="contato.html" onclick="closeMobileNav()">Contato</a>
-			</div>
-		</nav>
-		<div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
-
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/mobileNav.js"></script>
 		<script src="assets/js/blog.js"></script>
+		<script src="assets/js/post-view.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	</body>
 </html>

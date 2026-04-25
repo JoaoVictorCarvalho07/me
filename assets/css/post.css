@@ -1,0 +1,24 @@
+/* No seu blog.css ou num novo post.css */
+.md-content {
+	line-height: 1.8;
+	font-size: 1.1rem;
+}
+
+.md-content h2 {
+	margin-top: 2rem;
+	color: var(--color-primary);
+}
+
+.md-content pre {
+	background: #1e1e1e;
+	color: #fff;
+	padding: 1.5rem;
+	border-radius: 8px;
+	overflow-x: auto;
+	margin: 1.5rem 0;
+}
+
+.md-content code {
+	font-family: "Fira Code", monospace;
+	font-size: 0.9em;
+}
