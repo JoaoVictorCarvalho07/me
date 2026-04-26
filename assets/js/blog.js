@@ -1,6 +1,6 @@
 
 // lista de arquivos
-const postFiles = ["formularios", "PostsEmMarkdown","teste"];
+const postFiles = ["formularios", "PostsEmMarkdown"];
 
 // 2. O Parser de Frontmatter (Regex que discutimos)
 function parseMD(rawContent) {
