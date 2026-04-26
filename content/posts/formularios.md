@@ -14,7 +14,7 @@ title: Formularios HTML
 desc: Um resumo breve sobre formularios e suas subtags
 date: 25 Abr 2026
 tag: HTML
-readTime: 10 min
+readTime: 15 min
 thumb: assets/img/blog/minha-imagem.webp
 ---
 
@@ -68,10 +68,10 @@ Usado para coletar blocos de texto multilinha (como comentários, biografias ou 
 ```html
 <label for="mensagem">Deixe seu comentário:</label>
 <textarea
-	id="mensagem"
-	name="mensagem"
-	rows="5"
-	placeholder="Escreva aqui..."
+  id="mensagem"
+  name="mensagem"
+  rows="5"
+  placeholder="Escreva aqui..."
 ></textarea>
 ```
 
@@ -88,14 +88,14 @@ HTML
 ```html
 <label for="carro">Escolha um carro:</label>
 <select id="carro" name="carro">
-	<optgroup label="Marcas Japonesas">
-		<option value="honda">Honda</option>
-		<option value="toyota">Toyota</option>
-	</optgroup>
-	<optgroup label="Marcas Alemãs">
-		<option value="bmw">BMW</option>
-		<option value="audi" selected>Audi</option>
-	</optgroup>
+  <optgroup label="Marcas Japonesas">
+    <option value="honda">Honda</option>
+    <option value="toyota">Toyota</option>
+  </optgroup>
+  <optgroup label="Marcas Alemãs">
+    <option value="bmw">BMW</option>
+    <option value="audi" selected>Audi</option>
+  </optgroup>
 </select>
 ```
 
@@ -110,10 +110,10 @@ HTML
 <input list="navegadores" id="navegador" name="navegador" />
 
 <datalist id="navegadores">
-	<option value="Chrome"></option>
-	<option value="Firefox"></option>
-	<option value="Safari"></option>
-	<option value="Edge"></option>
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Safari"></option>
+  <option value="Edge"></option>
 </datalist>
 ```
 
@@ -142,13 +142,13 @@ HTML
 
 ```html
 <fieldset>
-	<legend>Qual sua linguagem favorita?</legend>
+  <legend>Qual sua linguagem favorita?</legend>
 
-	<input type="radio" id="js" name="linguagem" value="JavaScript" />
-	<label for="js">JavaScript</label><br />
+  <input type="radio" id="js" name="linguagem" value="JavaScript" />
+  <label for="js">JavaScript</label><br />
 
-	<input type="radio" id="py" name="linguagem" value="Python" />
-	<label for="py">Python</label>
+  <input type="radio" id="py" name="linguagem" value="Python" />
+  <label for="py">Python</label>
 </fieldset>
 ```
 
@@ -172,7 +172,7 @@ HTML
 
 <label for="forca">Força da Senha:</label>
 <meter id="forca" value="2" min="0" max="4" low="1" high="3" optimum="4">
-	Razoável
+  Razoável
 </meter>
 ```
 
@@ -195,18 +195,18 @@ HTML
 
 ```html
 <form>
-	<label for="senha"
-		>Senha (mínimo 8 caracteres, apenas letras e números):</label
-	>
-	<input
-		type="password"
-		id="senha"
-		name="senha"
-		required
-		minlength="8"
-		pattern="[a-zA-Z0-9]+"
-	/>
-	<button type="submit">Registrar</button>
+  <label for="senha"
+    >Senha (mínimo 8 caracteres, apenas letras e números):</label
+  >
+  <input
+    type="password"
+    id="senha"
+    name="senha"
+    required
+    minlength="8"
+    pattern="[a-zA-Z0-9]+"
+  />
+  <button type="submit">Registrar</button>
 </form>
 ```
 
