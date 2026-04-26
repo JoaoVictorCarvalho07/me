@@ -1,158 +1,158 @@
 <!doctype html>
 <html lang="pt-br" class="scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Blog — João Victor Carvalho</title>
-		<meta
-			name="description"
-			content="Textos sobre desenvolvimento, aprendizados e reflexões de João Victor Carvalho."
-		/>
-		<meta name="theme-color" content="#0ea5e9" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
-		/>
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link rel="stylesheet" href="assets/css/index.css" />
-		<link rel="stylesheet" href="assets/css/blog.css" />
-		<link rel="stylesheet" href="assets/css/home.css" />
-	</head>
-	<body>
-		<style>
-			.md-content h1,
-			.md-content h2 {
-				margin-top: 1.5rem;
-				margin-bottom: 1rem;
-				font-weight: 800;
-			}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — João Victor Carvalho</title>
+    <meta
+      name="description"
+      content="Textos sobre desenvolvimento, aprendizados e reflexões de João Victor Carvalho."
+    />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+  <body>
+    <style>
+      .md-content h1,
+      .md-content h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
 
-			.md-content p {
-				margin-bottom: 1rem;
-				line-height: 1.6;
-			}
+      .md-content p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
 
-			.md-content ul {
-				margin-left: 1.5rem;
-				margin-bottom: 1rem;
-			}
-			.md-content {
-				color: var(--color-text);
-				background-color: var(--color-bg-md);
-				padding: 2rem 3rem;
-				border-radius: 4px;
-				font-family: "Arial", Courier, monospace;
-			}
-			.md-content code {
-				color: var(--color-text-code);
-				text-decoration: none;
-			}
-		</style>
-		<script src="assets/js/theme.js"></script>
+      .md-content ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .md-content {
+        color: var(--color-text);
+        background-color: var(--color-bg-md);
+        padding: 2rem 3rem;
+        border-radius: 4px;
+        font-family: "Arial", Courier, monospace;
+      }
+      .md-content code {
+        color: var(--color-text-code);
+        text-decoration: none;
+      }
+    </style>
+    <script src="assets/js/theme.js"></script>
 
-		<!-- ===================== HEADER ===================== -->
-		<header class="site-header" role="banner">
-			<div class="container">
-				<a
-					href="index.html"
-					class="site-logo"
-					aria-label="João Victor — Início"
-				>
-					joao.dev<span>()</span>
-				</a>
-				<nav class="site-nav" aria-label="Navegação principal">
-					<a href="projetos.html">Projetos</a>
-					<a href="sobre.html">Sobre</a>
-					<a href="blog.html">Blog</a>
-					<a href="gostos.html">Gostos</a>
-					<a href="agora.html">Agora</a>
-				</nav>
-				<div class="header-actions">
-					<button
-						class="btn-icon"
-						aria-label="Alternar tema"
-						onclick="toggleTheme()"
-					>
-						<svg
-							class="icon-moon"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
-							/>
-						</svg>
-						<svg
-							class="icon-sun"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
-							/>
-						</svg>
-					</button>
-					<button
-						class="btn-icon btn-hamburger"
-						aria-label="Abrir menu"
-						onclick="toggleMobileNav()"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							aria-hidden="true"
-						>
-							<line x1="4" y1="6" x2="20" y2="6" />
-							<line x1="4" y1="12" x2="20" y2="12" />
-							<line x1="4" y1="18" x2="20" y2="18" />
-						</svg>
-					</button>
-				</div>
-			</div>
-		</header>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a
+          href="index.html"
+          class="site-logo"
+          aria-label="João Victor — Início"
+        >
+          joao.dev<span>()</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="blog.html">Blog</a>
+          <a href="gostos.html">Gostos</a>
+          <a href="agora.html">Agora</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="btn-icon"
+            aria-label="Alternar tema"
+            onclick="toggleTheme()"
+          >
+            <svg
+              class="icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
+              />
+            </svg>
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-icon btn-hamburger"
+            aria-label="Abrir menu"
+            onclick="toggleMobileNav()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
 
-		<main>
-			<article class="post-article section">
-				<div class="container">
-					<header class="post-header">
-						<p id="post-date" class="eyebrow"></p>
-						<h1 id="post-title">Carregando...</h1>
-						<div id="post-tags" class="tags-container"></div>
-					</header>
+    <main>
+      <article class="post-article section">
+        <div class="container">
+          <header class="post-header">
+            <p id="post-date" class="eyebrow"></p>
+            <h1 id="post-title">Carregando...</h1>
+            <div id="post-tags" class="tags-container"></div>
+          </header>
 
-					<div
-						id="post-content"
-						class="md-content markdown-body md-content-coder"
-					></div>
-				</div>
-			</article>
-		</main>
-		<footer class="site-footer" role="contentinfo">
-			<div class="container">
-				<p>
-					© <span class="js-year"></span> João Victor Carvalho. Feito com muito
-					café ☕
-				</p>
-				<a href="#" class="footer-top" aria-label="Voltar ao topo"
-					>Voltar ao topo ↑</a
-				>
-			</div>
-		</footer>
-		<script src="assets/js/blog.js"></script>
-		<script src="assets/js/post-view.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-	</body>
+          <div
+            id="post-content"
+            class="md-content markdown-body md-content-coder"
+          ></div>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>
+          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
+          café ☕
+        </p>
+        <a href="#" class="footer-top" aria-label="Voltar ao topo"
+          >Voltar ao topo ↑</a
+        >
+      </div>
+    </footer>
+    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/post-view.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
 </html>

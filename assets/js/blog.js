@@ -1,11 +1,10 @@
-// assets/js/blog.js
 
-// 1. Sua lista de arquivos (o único lugar manual)
-const postFiles = ["formularios"];
+// lista de arquivos
+const postFiles = ["formularios", "PostsEmMarkdown","teste"];
 
 // 2. O Parser de Frontmatter (Regex que discutimos)
 function parseMD(rawContent) {
-  // Esse Regex busca tudo o que está entre os primeiros ---
+  // Regex busca tudo o que está entre os primeiros ---
   const regex = /^---\s*([\s\S]*?)\s*---/;
   const match = regex.exec(rawContent);
 
@@ -13,9 +12,9 @@ function parseMD(rawContent) {
   let content = rawContent;
 
   if (match) {
-    // Se achou o Frontmatter, vamos processar os metadados
+    // Se achou o Frontmatter, processar os metadados
     const yamlBlock = match[1];
-    // E aqui removemos o bloco do conteúdo final
+    // remove o bloco do conteúdo final
     content = rawContent.replace(regex, "").trim();
 
     yamlBlock.split("\n").forEach((line) => {
