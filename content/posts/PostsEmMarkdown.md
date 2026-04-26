@@ -32,7 +32,10 @@ thumb: assets/img/blog/markdown-system.webp
 ### 🧩 Desafio 01: Renderização sem Backend
 
 - **Problema:** Como exibir o conteúdo de um arquivo `.md` em uma página HTML sem usar Node.js ou linguagens de servidor?
-- **Solução:** 1. Utilizar o método `fetch()` do [[JavaScript]] para buscar o conteúdo de texto do arquivo. 2. Passar esse texto pela biblioteca `marked.parse()`. 3. Injetar o HTML resultante em um container usando `.innerHTML`.
+- **Solução:** 
+    1. Utilizar o método `fetch()` do [[JavaScript]] para buscar o conteúdo de texto do arquivo. 
+    2. Passar esse texto pela biblioteca `marked.parse()`. 
+    3. Injetar o HTML resultante em um container usando `.innerHTML`.
 
 ### 👻 Desafio 02: Arquivos não encontrados no GitHub Pages (Jekyll)
 
