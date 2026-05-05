@@ -1,167 +1,186 @@
 <!doctype html>
 <html lang="pt-br" class="scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Blog — João Victor Carvalho</title>
-		<meta
-			name="description"
-			content="Textos sobre desenvolvimento, aprendizados e reflexões de João Victor Carvalho."
-		/>
-		<meta name="theme-color" content="#0ea5e9" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link rel="stylesheet" href="assets/css/index.css" />
-		<link rel="stylesheet" href="assets/css/blog.css" />
-		<link rel="stylesheet" href="assets/css/home.css" />
-	</head>
-	<body>
-		<script src="assets/js/theme.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — João Victor Carvalho</title>
+    <meta
+      name="description"
+      content="Textos sobre desenvolvimento, aprendizados e reflexões de João Victor Carvalho."
+    />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+  <body>
+    <script src="assets/js/theme.js"></script>
 
-		<!-- ===================== HEADER ===================== -->
-		<header class="site-header" role="banner">
-			<div class="container">
-				<a
-					href="index.html"
-					class="site-logo"
-					aria-label="João Victor — Início"
-				>
-					joao.dev<span>()</span>
-				</a>
-				<nav class="site-nav" aria-label="Navegação principal">
-					<a href="projetos.html">Projetos</a>
-					<a href="sobre.html">Sobre</a>
-					<a href="blog.html">Blog</a>
-					<a href="gostos.html">Gostos</a>
-					<a href="agora.html">Agora</a>
-					<a href="contato.html">Contato</a>
-				</nav>
-				<div class="header-actions">
-					<button
-						class="btn-icon"
-						aria-label="Alternar tema"
-						onclick="toggleTheme()"
-					>
-						<svg
-							class="icon-moon"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
-							/>
-						</svg>
-						<svg
-							class="icon-sun"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
-							/>
-						</svg>
-					</button>
-					<button
-						class="btn-icon btn-hamburger"
-						aria-label="Abrir menu"
-						onclick="toggleMobileNav()"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							aria-hidden="true"
-						>
-							<line x1="4" y1="6" x2="20" y2="6" />
-							<line x1="4" y1="12" x2="20" y2="12" />
-							<line x1="4" y1="18" x2="20" y2="18" />
-						</svg>
-					</button>
-				</div>
-			</div>
-		</header>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a
+          href="index.html"
+          class="site-logo"
+          aria-label="João Victor — Início"
+        >
+          joao.dev<span>()</span>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="projetos.html">Projetos</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="blog.html">Blog</a>
+          <a href="gostos.html">Gostos</a>
+          <a href="agora.html">Agora</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="btn-icon"
+            aria-label="Alternar tema"
+            onclick="toggleTheme()"
+          >
+            <svg
+              class="icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
+              />
+            </svg>
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+              />
+            </svg>
+          </button>
+          <button
+            class="btn-icon btn-hamburger"
+            aria-label="Abrir menu"
+            onclick="toggleMobileNav()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
 
-		<!-- ===================== MAIN ===================== -->
-		<main>
-			<!-- Page header -->
-			<div class="page-header">
-				<div class="container">
-					<p class="eyebrow">Escrita</p>
-					<h1>Blog</h1>
-					<p>
-						Textos sobre desenvolvimento, aprendizados, erros cometidos e
-						reflexões honestas sobre a carreira.
-					</p>
-				</div>
-			</div>
+    <!-- ===================== MAIN ===================== -->
+    <main>
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="container">
+          <p class="eyebrow">Escrita</p>
+          <h1>Blog</h1>
+          <p>
+            Textos sobre desenvolvimento, aprendizados, erros cometidos e
+            reflexões honestas sobre a carreira.
+          </p>
+        </div>
+      </div>
 
-			<section class="section" aria-labelledby="blog-title">
-				<div class="container">
-					<div id="blog-grid" class="blog-grid-container"></div>
-				</div>
-			</section>
-		</main>
+      <section class="section" aria-labelledby="blog-title">
+        <div class="container">
+          <div id="blog-grid" class="blog-grid-container"></div>
+        </div>
+      </section>
+    </main>
 
-		<!-- ===================== FOOTER ===================== -->
-		<footer class="site-footer" role="contentinfo">
-			<div class="container">
-				<p>
-					© <span class="js-year"></span> João Victor Carvalho. Feito com muito
-					café ☕
-				</p>
-				<a href="#" class="footer-top" aria-label="Voltar ao topo"
-					>Voltar ao topo ↑</a
-				>
-			</div>
-		</footer>
-		<!-- Nav mobile -->
-		<nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
-			<div class="container">
-				<button
-					class="btn-icon btn-hamburger"
-					aria-label="Abrir menu"
-					aria-expanded="false"
-					onclick="toggleMobileNav()"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						aria-hidden="true"
-					>
-						<line x1="4" y1="6" x2="20" y2="6" />
-						<line x1="4" y1="12" x2="20" y2="12" />
-						<line x1="4" y1="18" x2="20" y2="18" />
-					</svg>
-				</button>
-				<a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
-				<a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
-				<a href="blog.html" onclick="closeMobileNav()">Blog</a>
-				<a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
-				<a href="agora.html" onclick="closeMobileNav()">Agora</a>
-				<a href="contato.html" onclick="closeMobileNav()">Contato</a>
-			</div>
-		</nav>
-		<div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>
+          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
+          café
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="1em"
+            height="1em"
+            style="vertical-align: -0.125em"
+            aria-hidden="true"
+          >
+            <path d="M18 8h1a4 4 0 010 8h-1" />
+            <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+            <line x1="6" y1="1" x2="6" y2="4" />
+            <line x1="10" y1="1" x2="10" y2="4" />
+            <line x1="14" y1="1" x2="14" y2="4" />
+          </svg>
+        </p>
+        <a href="#" class="footer-top" aria-label="Voltar ao topo"
+          >Voltar ao topo ↑</a
+        >
+      </div>
+    </footer>
+    <!-- Nav mobile -->
+    <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+      <div class="container">
+        <button
+          class="btn-icon btn-hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          onclick="toggleMobileNav()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+        <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+        <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+        <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+        <a href="agora.html" onclick="closeMobileNav()">Agora</a>
+        <a href="contato.html" onclick="closeMobileNav()">Contato</a>
+      </div>
+    </nav>
+    <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
 
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/mobileNav.js"></script>
-		<script src="assets/js/blog.js"></script>
-	</body>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/mobileNav.js"></script>
+    <script src="assets/js/blog.js"></script>
+  </body>
 </html>
