@@ -52,8 +52,6 @@ button {
 	--color-tag-bg: #f1f5f9;
 	--color-tag-text: #475569;
 	--color-accent-soft: #4e69751a;
-	--color-bg-md: #e5ebf1;
-	--color-text-code: #ffffff;
 
 	/* Sombras */
 	--shadow-soft: 0 10px 30px rgba(2, 6, 23, 0.08);
@@ -88,8 +86,7 @@ button {
 	--color-card: #0f172a;
 	--color-tag-bg: #1e293b;
 	--color-tag-text: #94a3b8;
-	--color-bg-md: #0d1117;
-	--color-text-code: #f1f5f9;
+	
 
 	--shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
 	--shadow-card: 0 4px 16px rgba(0, 0, 0, 0.25);
