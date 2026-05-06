@@ -1,24 +1,41 @@
 /* No seu blog.css ou num novo post.css */
 .md-content {
-	line-height: 1.8;
-	font-size: 1.1rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 .md-content h2 {
-	margin-top: 2rem;
-	color: var(--color-primary);
+  margin-top: 2rem;
+  color: var(--color-primary);
 }
 
 .md-content pre {
-	background: #1e1e1e;
-	color: #fff;
-	padding: 1.5rem;
-	border-radius: 8px;
-	overflow-x: auto;
-	margin: 1.5rem 0;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
 }
 
 .md-content code {
-	font-family: "Fira Code", monospace;
-	font-size: 0.9em;
+  background: #504d4d;
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.md-content code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9em;
+}
+
+:root {
+  --color-bg-md: #e5ebf1;
+  --color-text-code: #ffffff;
+}
+
+.dark {
+  --color-bg-md: #0d1117;
+  --color-text-code: #f1f5f9;
 }
