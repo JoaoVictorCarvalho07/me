@@ -1,6 +1,5 @@
-
 // lista de arquivos
-const postFiles = ["formularios", "PostsEmMarkdown"];
+const postFiles = ["formularios", "PostsEmMarkdown", "conhecendo_hadoop"];
 
 // 2. O Parser de Frontmatter (Regex que discutimos)
 function parseMD(rawContent) {
