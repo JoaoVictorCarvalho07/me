@@ -1,4 +1,23 @@
-# Analisando Comércio Mundial com Hadoop: desafios reais de um projeto MapReduce
+---
+tags:
+  -
+  - hadoop
+  - mapreduce
+  - big-data
+  - java
+  - backend
+aliases:
+  - Hadoop MapReduce
+  - Big Data com Hadoop
+  - Comércio Mundial Hadoop
+
+title: Analisando Comércio Mundial com Hadoop
+desc: Como usamos MapReduce para processar milhões de registros do UN Comtrade, os erros reais que encontramos e como resolvemos
+date: 12 Mai 2026
+tag: Big Data
+readTime: 8 min
+thumb: assets/img/blog/hadoop.webp
+---
 
 Em um projeto de Big Data na faculdade, o desafio foi processar milhões de linhas de dados de comércio internacional usando **Apache Hadoop** e o modelo de programação **MapReduce**. O dataset era do UN Comtrade — uma base pública com registros de exportações e importações de países do mundo inteiro, de 1988 até os dias de hoje.
 
