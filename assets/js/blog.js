@@ -5,6 +5,7 @@ const postFiles = [
   "conhecendo_hadoop",
   "rabbitmq_resiliencia",
   "sgs-cadi-projeto",
+  "post-ia-estudos",
 ];
 
 // 2. O Parser de Frontmatter (Regex que discutimos)
