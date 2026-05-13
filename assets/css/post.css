@@ -32,10 +32,14 @@
 
 :root {
   --color-bg-md: #e5ebf1;
-  --color-text-code: #ffffff;
+  --color-text-code: #f1f5f9;
 }
 
 .dark {
   --color-bg-md: #0d1117;
   --color-text-code: #f1f5f9;
+}
+table td,
+th {
+  color: rgb(200, 200, 200);
 }
