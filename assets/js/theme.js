@@ -1,5 +1,7 @@
 const THEME_KEY = "joao.theme";
 
+document.getElementById("theme-toggle")?.addEventListener("click", toggleTheme);
+
 function setTheme(mode) {
   const html = document.documentElement;
   if (mode === "dark") {

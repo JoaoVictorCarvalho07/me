@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="assets/css/home.css" />
   </head>
   <body>
-    <script src="assets/js/theme.js"></script>
-
     <!-- ===================== HEADER ===================== -->
     <header class="site-header" role="banner">
       <div class="container">
@@ -40,11 +38,7 @@
           <a href="contato.html">Contato</a>
         </nav>
         <div class="header-actions">
-          <button
-            class="btn-icon"
-            aria-label="Alternar tema"
-            onclick="toggleTheme()"
-          >
+          <button class="btn-icon" aria-label="Alternar tema" id="theme-toggle">
             <svg
               class="icon-moon"
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +94,7 @@
           <p class="eyebrow">Portfólio</p>
           <h1>Projetos</h1>
           <p>
-            Aplicações reais que constroí — desde plataformas com Java/Spring
+            Aplicações reais que construí — desde plataformas com Java/Spring
             até apps mobile em Kotlin e frontends em React.
           </p>
         </div>
@@ -131,16 +125,16 @@
               class="project-card"
               role="listitem"
               data-tags="react, typescript, frontend"
-              onclick="openModal('./public/ToDoApp.png')"
+              onclick="openModal('./public/ToDoApp.webp')"
               tabindex="0"
               aria-label="Projeto: TODO app — clique para ver screenshot"
               onkeydown="
-                if (event.key === 'Enter') openModal('./public/ToDoApp.png');
+                if (event.key === 'Enter') openModal('./public/ToDoApp.webp');
               "
             >
               <img
                 class="project-card-img"
-                src="./public/ToDoApp.png"
+                src="./public/ToDoApp.webp"
                 alt="Screenshot do TODO app"
                 loading="lazy"
                 onerror="
@@ -176,16 +170,16 @@
               class="project-card"
               role="listitem"
               data-tags="react, java, fullstack, spring"
-              onclick="openModalx('./public/VideoAula.png')"
+              onclick="openModalx('./public/VideoAula.webp')"
               tabindex="0"
               aria-label="Projeto: Plataforma de Cursos — clique para ver screenshot"
               onkeydown="
-                if (event.key === 'Enter') openModal('./public/VideoAula.png');
+                if (event.key === 'Enter') openModal('./public/VideoAula.webp');
               "
             >
               <img
                 class="project-card-img"
-                src="./public/VideoAula.png"
+                src="./public/VideoAula.webp"
                 alt="Screenshot da plataforma de cursos"
                 loading="lazy"
                 onerror="
@@ -231,16 +225,16 @@
               class="project-card"
               role="listitem"
               data-tags="react, typescript, frontend, cloudflare"
-              onclick="openModal('./public/MidiaKit.png')"
+              onclick="openModal('./public/MidiaKit.webp')"
               tabindex="0"
               aria-label="Projeto: Mídia Kit UGC — clique para ver screenshot"
               onkeydown="
-                if (event.key === 'Enter') openModal('./public/MidiaKit.png');
+                if (event.key === 'Enter') openModal('./public/MidiaKit.webp');
               "
             >
               <img
                 class="project-card-img"
-                src="./public/MidiaKit.png"
+                src="./public/MidiaKit.webp"
                 alt="Screenshot do Mídia Kit UGC"
                 loading="lazy"
                 onerror="
@@ -282,17 +276,17 @@
               class="project-card"
               role="listitem"
               data-tags="react, typescript, frontend, fullstack"
-              onclick="openModal('./public/siteIsabelPontes.png')"
+              onclick="openModal('./public/siteIsabelPontes.webp')"
               tabindex="0"
               aria-label="Projeto: Site Isabel Pontes — clique para ver screenshot"
               onkeydown="
                 if (event.key === 'Enter')
-                  openModal('./public/siteIsabelPontes.png');
+                  openModal('./public/siteIsabelPontes.webp');
               "
             >
               <img
                 class="project-card-img"
-                src="./public/siteIsabelPontes.png"
+                src="./public/siteIsabelPontes.webp"
                 alt="Screenshot do site Isabel Pontes"
                 loading="lazy"
                 onerror="
@@ -337,16 +331,16 @@
               class="project-card"
               role="listitem"
               data-tags="java, mobile, kotlin, spring, fullstack"
-              onclick="openModal('./public/nucleo.png')"
+              onclick="openModal('./public/nucleo.webp')"
               tabindex="0"
               aria-label="Projeto: Núcleo — clique para ver screenshot"
               onkeydown="
-                if (event.key === 'Enter') openModal('./public/nucleo.png');
+                if (event.key === 'Enter') openModal('./public/nucleo.webp');
               "
             >
               <img
                 class="project-card-img"
-                src="./public/nucleo.png"
+                src="./public/nucleo.webp"
                 alt="Screenshot do app Núcleo"
                 loading="lazy"
                 onerror="
@@ -392,17 +386,17 @@
               class="project-card"
               role="listitem"
               data-tags="react, typescript, tailwind, vite, portfolio"
-              onclick="openModal('./public/portifolio_paulo.png')"
+              onclick="openModal('./public/portifolio_paulo.webp')"
               tabindex="0"
               aria-label="Projeto: Portfólio Paulo Ricardo — clique para ver screenshot"
               onkeydown="
                 if (event.key === 'Enter')
-                  openModal('./public/portifolio_paulo.png');
+                  openModal('./public/portifolio_paulo.webp');
               "
             >
               <img
                 class="project-card-img"
-                src="./public/portifolio_paulo.png"
+                src="./public/portifolio_paulo.webp"
                 alt="Screenshot do Portfólio Paulo Ricardo"
                 loading="lazy"
               />
@@ -525,7 +519,6 @@
         >
       </div>
     </footer>
-
     <!-- Nav mobile -->
     <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
       <div class="container">
@@ -533,7 +526,7 @@
           class="btn-icon btn-hamburger"
           aria-label="Abrir menu"
           aria-expanded="false"
-          onclick="toggleMobileNav()"
+          id="theme-toggle"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -561,8 +554,7 @@
     <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
 
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/ModalControl.js"></script>
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/mobileNav.js"></script>
-    <script src="assets/js/filtroProjetos.js"></script>
   </body>
 </html>

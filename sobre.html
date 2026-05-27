@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="assets/css/home.css" />
   </head>
   <body>
-    <script src="assets/js/theme.js"></script>
-
     <!-- ===================== HEADER ===================== -->
     <header class="site-header" role="banner">
       <div class="container">
@@ -40,11 +38,7 @@
           <a href="contato.html">Contato</a>
         </nav>
         <div class="header-actions">
-          <button
-            class="btn-icon"
-            aria-label="Alternar tema"
-            onclick="toggleTheme()"
-          >
+          <button class="btn-icon" aria-label="Alternar tema" id="theme-toggle">
             <svg
               class="icon-moon"
               xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +85,6 @@
         </div>
       </div>
     </header>
-
     <!-- ===================== MAIN ===================== -->
     <main>
       <!-- Page header -->
@@ -135,11 +128,11 @@
             <h2 id="sobre-title">Minha história</h2>
             <div class="about-text">
               <p>
-                Vim de Boa vista-RR, uma cidade pequena no extremo norte do
+                Vim de Boa Vista-RR, uma cidade pequena no extremo norte do
                 Brasil. Desde cedo, sempre fui fascinado por tecnologia e como
-                as coisas funcionam por trás das telas. Na adolescencia, me
-                mudei para manaus-AM com minha mãe, onde terminei o ensino medio
-                durante a pandemia. Nesse periodo de isolamento, a programação
+                as coisas funcionam por trás das telas. Na adolescência, me
+                mudei para Manaus-AM com minha mãe, onde terminei o ensino médio
+                durante a pandemia. Nesse período de isolamento, a programação
                 se tornou um refúgio e um hobby que me ajudou a passar o tempo e
                 a aprender algo novo.
               </p>
@@ -150,7 +143,7 @@
                 sai do papel.
               </p>
               <p>
-                Com 19 anos me mudei para curitiba-PR e comecei a faculdade.
+                Com 19 anos me mudei para Curitiba-PR e comecei a faculdade.
                 Desde então, tenho me dedicado a aprender e crescer como
                 desenvolvedor, explorando diferentes tecnologias e trabalhando
                 em projetos pessoais e freelance para ganhar experiência
@@ -163,10 +156,9 @@
               <p>
                 Atualmente estudando
                 <strong>arquiteturas limpas</strong>,
-                <strong>google design</strong>
+                <strong>google design</strong>,
                 <strong>testes automatizados</strong>,
-                <strong>estrutura de dados</strong>,
-                <strong>Big Data</strong>
+                <strong>estrutura de dados</strong>, <strong>Big Data</strong>,
                 <strong>observabilidade</strong>,
                 <strong>IOS development</strong> e como escalar sistemas sem
                 perder a cabeça. Aberto a freelas, propostas e colaborações que
@@ -338,7 +330,7 @@
           class="btn-icon btn-hamburger"
           aria-label="Abrir menu"
           aria-expanded="false"
-          onclick="toggleMobileNav()"
+          id="theme-toggle"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -365,6 +357,7 @@
     </nav>
     <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/mobileNav.js"></script>
   </body>
 </html>
