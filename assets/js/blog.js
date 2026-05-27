@@ -6,6 +6,7 @@ const postFiles = [
   "rabbitmq_resiliencia",
   "sgs-cadi-projeto",
   "post-ia-estudos",
+  "docker-ambiente-separado"
 ];
 
 // 2. O Parser de Frontmatter (Regex que discutimos)
