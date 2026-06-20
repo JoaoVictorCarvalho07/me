@@ -1,5 +1,9 @@
 // lista de arquivos
 const postFiles = [
+  "processo-seletivo-trainee",
+  "jornada-vitasmile",
+  "signals-vs-rxjs-angular",
+  "deploy-aiven-chave-primaria",
   "formularios",
   "PostsEmMarkdown",
   "conhecendo_hadoop",

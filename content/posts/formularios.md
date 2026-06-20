@@ -51,7 +51,7 @@ A tag `<input>` é o elemento mais versátil e essencial dentro de um formulári
 A tag `<button>` possui várias funções, mas dentro de um `<form>`, seu comportamento depende fundamentalmente do atributo `type`:
 
 - **`type="submit"` _(Comportamento Padrão)_**: Se você colocar um `<button>` dentro de um form sem especificar o tipo, ele assumirá o papel de `submit`. Ao ser clicado, ele tentará enviar o formulário, disparando o evento `onsubmit`.
-- **`type="button"`**: Cria um botão genérico. Ele **não** envia o formulário ao ser clicado. Muito útil para engatilhar scripts paralelos no [[JavaScript]] sem recarregar a página ou submeter os dados acidentalmente.
+- **`type="button"`**: Cria um botão genérico. Ele **não** envia o formulário ao ser clicado. Muito útil para engatilhar scripts paralelos no JavaScript sem recarregar a página ou submeter os dados acidentalmente.
 - **`type="reset"`**: Reseta todos os inputs do formulário para seus valores iniciais.
 
 ## 📝 Textos Longos e Seleções
@@ -162,7 +162,7 @@ O HTML5 introduziu tags nativas para demonstrar progresso ou valores escalares, 
   - _Atributos:_ `value` (valor atual) e `max` (valor total).
 - **`<meter>`**: Representa uma medida escalar dentro de um intervalo conhecido (ex: uso de disco, nível de força de uma senha).
   - _Atributos:_ `value`, `min`, `max`, `low`, `high`, `optimum`.
-- **`<output>`**: Exibe o resultado de um cálculo ou ação do usuário. Usualmente atualizado via [[JavaScript]].
+- **`<output>`**: Exibe o resultado de um cálculo ou ação do usuário. Usualmente atualizado via JavaScript.
 
 HTML
 
@@ -180,7 +180,7 @@ HTML
 
 ## 🛡️ Atributos de Validação Nativa (HTML5)
 
-Antes de enviar os dados para o backend ou validar com bibliotecas (como [[zod]] no [[React]]), o próprio HTML consegue impedir o envio de dados incorretos, disparando tooltips nativas do navegador.
+Antes de enviar os dados para o backend ou validar com bibliotecas (como zod no React), o próprio HTML consegue impedir o envio de dados incorretos, disparando tooltips nativas do navegador.
 
 - **`required`**: O campo não pode estar vazio.
 - **`minlength` / `maxlength`**: Define o tamanho mínimo e máximo de caracteres para inputs de texto.
@@ -214,7 +214,7 @@ HTML
 
 ## ⚡ Boas Práticas e Ecossistema (React / Zod)
 
-No desenvolvimento moderno de interfaces web (como usando [[React]] e [[TypeScript]]), raramente usamos as ações nativas (`action` e métodos GET/POST literais no HTML). Em vez disso, interceptamos o evento de envio, prevenimos o recarregamento e gerenciamos os dados manualmente.
+No desenvolvimento moderno de interfaces web (como usando React e [[TypeScript]]), raramente usamos as ações nativas (`action` e métodos GET/POST literais no HTML). Em vez disso, interceptamos o evento de envio, prevenimos o recarregamento e gerenciamos os dados manualmente.
 
 Ao usar ferramentas de validação de schema (como o **Zod**), garantimos que os dados digitados nos `<input>`s estejam no formato exato antes de enviá-los ao backend.
 

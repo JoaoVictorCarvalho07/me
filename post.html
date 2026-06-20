@@ -52,6 +52,18 @@
         color: var(--color-text-code);
         text-decoration: none;
       }
+      .md-content .wikilink {
+        color: var(--color-accent);
+        font-weight: 600;
+        border-bottom: 1px solid var(--color-accent);
+      }
+      .md-content .wikilink:hover {
+        opacity: 0.8;
+      }
+      .md-content .wikilink-missing {
+        border-bottom: 1px dotted var(--color-text);
+        opacity: 0.75;
+      }
     </style>
 
     <!-- ===================== HEADER ===================== -->
@@ -188,8 +200,8 @@
 
     <script src="assets/js/mobileNav.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="assets/js/blog.js"></script>
     <script src="assets/js/post-view.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>
