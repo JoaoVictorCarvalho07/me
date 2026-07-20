@@ -18,7 +18,7 @@ desc: Como subi o VitaSmile pra nuvem (Aiven + Render + Vercel) e descobri, do j
 date: 16 Jun 2026
 tag: DevOps
 readTime: 9 min
-thumb:
+thumb: assets/img/blog/deploy.avif
 ---
 
 O backend rodava redondo na minha máquina. O frontend também. O banco estava modelado, o JWT funcionando, os relatórios saindo. Faltava o passo que parece o mais simples e nunca é: colocar tudo no ar.

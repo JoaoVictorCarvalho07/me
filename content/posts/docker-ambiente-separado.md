@@ -15,7 +15,7 @@ title: Docker na prática — quando você quer um ambiente separado e o MySQL r
 desc: Como aprendi Docker e Docker Compose na prática tentando isolar o banco de dados de um projeto Spring Boot sem quebrar o que já tinha na máquina
 date: 27 Mai 2026
 tag: DevOps
-readTime: 12 min
+readTime: assets/img/blog/docker_learning.avif
 ---
 
 Eu já tinha o MySQL instalado direto na minha máquina. Funcionava, estava configurado, os projetos da faculdade dependiam dele. Aí comecei um novo projeto , um sistema de gestão de consultas em Spring Boot e não queria que o banco desse projeto interferisse no que já existia.

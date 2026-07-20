@@ -16,7 +16,7 @@ desc: A história do SGS-CADI, sistema de gestão para uma instituição de aten
 date: 12 Mai 2026
 tag: Projeto
 readTime: 5 min
-thumb: assets/img/blog/sgs-cadi.webp
+thumb: assets/img/blog/sgs-cadi.avif
 ---
 
 

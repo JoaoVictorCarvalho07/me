@@ -16,7 +16,7 @@ desc: Do nome da marca ao deploy na nuvem, o relato de como construí um sistema
 date: 16 Jun 2026
 tag: Projeto
 readTime: 11 min
-thumb:
+thumb: assets/img/blog/vitasmile.avif
 ---
 
 O briefing era um projeto final: um sistema de gestão de consultas odontológicas, com **Angular + Spring Boot + banco relacional**, autenticação, perfis de usuário e relatórios. Parecia direto. No papel sempre parece.
@@ -43,6 +43,7 @@ Modelar pensando no relatório que eu ainda nem tinha feito foi a melhor decisã
 Decidi começar pelo backend pra o front consumir contratos já estáveis. Estrutura clássica em camadas: **Controller → Service → Repository → Entity**, com DTOs (`records`) na borda pra nunca expor entidade JPA direto.
 
 As regras de negócio ficaram no **service**, não espalhadas:
+
 - sem conflito de horário pro mesmo dentista;
 - sem agendar no passado;
 - cancelamento exige motivo;
@@ -62,7 +63,7 @@ Esse "isolado por requisição" voltaria a importar mais tarde, num susto que co
 
 ## O frontend e a dança entre Signal e RxJS
 
-No Angular, a maior decisão de arquitetura foi *como* gerenciar estado. Demorei pra entender que **Signal e RxJS não são rivais**: Signal pra estado e derivação, RxJS pro assíncrono (cache com `shareReplay`, cancelamento com `switchMap`). Montei até um motor de paginação reutilizável (`PagedCollection`) que junta os dois.
+No Angular, a maior decisão de arquitetura foi _como_ gerenciar estado. Demorei pra entender que **Signal e RxJS não são rivais**: Signal pra estado e derivação, RxJS pro assíncrono (cache com `shareReplay`, cancelamento com `switchMap`). Montei até um motor de paginação reutilizável (`PagedCollection`) que junta os dois.
 
 Esse assunto rendeu um post só dele: [[signals-vs-rxjs-angular]].
 

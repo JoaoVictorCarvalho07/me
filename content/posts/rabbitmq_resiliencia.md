@@ -16,7 +16,7 @@ desc: Como tornar uma aplicação Spring Boot resiliente à indisponibilidade do
 date: 12 Mai 2026
 tag: Backend
 readTime: 4 min
-thumb: assets/img/blog/rabbitmq.webp
+thumb: assets/img/blog/rabbitmq.avif
 ---
 
 **Categoria:** Backend · Arquitetura · Spring Boot  

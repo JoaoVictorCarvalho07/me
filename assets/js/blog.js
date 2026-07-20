@@ -4,8 +4,6 @@ const postFiles = [
   "jornada-vitasmile",
   "signals-vs-rxjs-angular",
   "deploy-aiven-chave-primaria",
-  "formularios",
-  "PostsEmMarkdown",
   "conhecendo_hadoop",
   "rabbitmq_resiliencia",
   "sgs-cadi-projeto",
@@ -37,29 +35,72 @@ function parseMD(rawContent) {
   return { metadata, content };
 }
 
+// Quantos cards ficam "above the fold" (~primeira linha da grade).
+// Suas capas usam priority fetching; o resto usa lazy loading nativo.
+const EAGER_COUNT = 3;
+
+function escapeAttr(text) {
+  return String(text ?? "").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+
+// Monta a <img> de capa com a estratégia de carregamento correta por posição.
+// onerror remove a imagem se o arquivo faltar — a capa-gradiente atrás assume,
+// sem layout shift (o container já tem aspect-ratio reservado).
+function coverImg(thumb, eager) {
+  if (!thumb) return "";
+  const loading = eager
+    ? 'fetchpriority="high" loading="eager"'
+    : 'fetchpriority="low" loading="lazy"';
+  return `<img src="${escapeAttr(thumb)}" alt="" ${loading} decoding="async" onerror="this.remove()">`;
+}
+
 // 3. Renderização
 async function initBlog() {
   const grid = document.getElementById("blog-grid");
   if (!grid) return;
 
-  for (const slug of postFiles) {
-    const response = await fetch(`./content/posts/${slug}.md`);
-    const text = await response.text();
-    const { metadata } = parseMD(text);
+  // Fetch em paralelo; Promise.all preserva a ordem do array postFiles.
+  const posts = await Promise.all(
+    postFiles.map(async (slug) => {
+      try {
+        const response = await fetch(`./content/posts/${slug}.md`);
+        if (!response.ok) return null;
+        const text = await response.text();
+        return { slug, metadata: parseMD(text).metadata };
+      } catch {
+        return null;
+      }
+    }),
+  );
+
+  const fragment = document.createDocumentFragment();
+
+  posts.forEach((post, index) => {
+    if (!post) return;
+    const { slug, metadata } = post;
+    const tag = metadata.tag || "Geral";
+    const eager = index < EAGER_COUNT;
 
     const card = document.createElement("article");
     card.className = "blog-card";
     card.innerHTML = `
-            <span class="blog-tag">${metadata.tag || "Geral"}</span>
-            <h3><a href="post.html?slug=${slug}">${metadata.title}</a></h3>
-            <p>${metadata.desc}</p>
-            <div class="blog-meta">
-                <time>${metadata.date}</time>
-                <span>${metadata.readTime || "5 min"}</span>
-            </div>
-        `;
-    grid.appendChild(card);
-  }
+      <a class="blog-card-link" href="post.html?slug=${encodeURIComponent(slug)}" aria-label="Ler o post: ${escapeAttr(metadata.title)}">
+        <div class="blog-card-cover" data-tag="${escapeAttr(tag)}">${coverImg(metadata.thumb, eager)}</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">${tag}</span>
+          <h3 class="blog-card-title">${metadata.title || "Sem título"}</h3>
+          <p class="blog-card-excerpt">${metadata.desc || ""}</p>
+          <div class="blog-meta">
+            <time>${metadata.date || ""}</time>
+            <span>${metadata.readTime || "5 min"}</span>
+          </div>
+        </div>
+      </a>
+    `;
+    fragment.appendChild(card);
+  });
+
+  grid.appendChild(fragment);
 
   // Remove o empty-state se houver posts
   if (postFiles.length > 0) document.querySelector(".empty-state")?.remove();

@@ -16,7 +16,7 @@ desc: O caminho que percorri num programa de trainee, com cursos de Java Spring 
 date: 18 Jun 2026
 tag: Carreira
 readTime: 9 min
-thumb:
+thumb: assets/img/blog/treinee_experience.avif
 ---
 
 Entrei num programa de trainee e, diferente do que eu imaginava, o processo seletivo não foi só mandar currículo e esperar. Foi uma jornada de aprendizado de verdade: cursos, prática diária e, no fim, um projeto completo pra provar o que aprendi.

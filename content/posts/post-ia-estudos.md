@@ -22,7 +22,7 @@ tag: ia, estudos, notebooklm, obsidian, claude
 
 readTime: 6 min
 
-thumb:
+thumb: assets/img/blog/ia_study.avif
 ---
 
 **Categoria:** Inteligencia Artificial · Estudo · Ferramentas  

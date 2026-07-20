@@ -15,7 +15,7 @@ desc: Depois de construir um sistema inteiro em Angular, parei de tratar Signal 
 date: 16 Jun 2026
 tag: Frontend
 readTime: 8 min
-thumb:
+thumb: assets/img/blog/signals_rxjs_angular.avif
 ---
 
 Quando comecei a mexer com Angular moderno, caí numa dúvida que me travou por uns dias: **uso Signal ou uso RxJS?** Os dois falam de "reatividade", os dois parecem resolver as mesmas coisas, e a maioria dos tutoriais usa um ou outro sem explicar *quando* escolher.
