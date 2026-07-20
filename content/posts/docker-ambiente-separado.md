@@ -15,7 +15,8 @@ title: Docker na prática — quando você quer um ambiente separado e o MySQL r
 desc: Como aprendi Docker e Docker Compose na prática tentando isolar o banco de dados de um projeto Spring Boot sem quebrar o que já tinha na máquina
 date: 27 Mai 2026
 tag: DevOps
-readTime: assets/img/blog/docker_learning.avif
+readTime: 12 min
+thumb: assets/img/blog/docker_learning.avif
 ---
 
 Eu já tinha o MySQL instalado direto na minha máquina. Funcionava, estava configurado, os projetos da faculdade dependiam dele. Aí comecei um novo projeto , um sistema de gestão de consultas em Spring Boot e não queria que o banco desse projeto interferisse no que já existia.
@@ -32,7 +33,7 @@ Quando comecei a ler sobre Docker, tudo parecia a mesma coisa. Levei um tempo pa
 
 **Docker Compose** é uma camada acima. Você descreve seus containers num arquivo `docker-compose.yml` e sobe tudo com um único comando. É mais prático mesmo quando você tem só um container porque a configuração fica documentada, versionada junto com o projeto, e qualquer outro dev que clonar o repo já sabe o que rodar.
 
-A virada de chave foi entender que o Compose não substitui o Docker  ele orquestra.
+A virada de chave foi entender que o Compose não substitui o Docker ele orquestra.
 
 ---
 
@@ -97,16 +98,16 @@ MYSQL_PASSWORD=1234
 
 O container subia sem erro aparente, mas ao tentar conectar com esse usuário recebia acesso negado. Conectando como `root` funcionava, mas o usuário `projeto_user` que eu esperava encontrar simplesmente não existia.
 
-O problema: **o MySQL já tem um usuário `root` criado por padrão**. A variável `MYSQL_USER` serve para criar um *novo* usuário na primeira inicialização. Se você passa `root`, ele ignora e não cria nada. E se o volume já existia de uma inicialização anterior com outra configuração, os dados antigos prevalecem sobre o `.env`.
+O problema: **o MySQL já tem um usuário `root` criado por padrão**. A variável `MYSQL_USER` serve para criar um _novo_ usuário na primeira inicialização. Se você passa `root`, ele ignora e não cria nada. E se o volume já existia de uma inicialização anterior com outra configuração, os dados antigos prevalecem sobre o `.env`.
 
 A solução foi dois passos:
 
 1. Trocar `MYSQL_USER` para um nome diferente:
 
 ```env
-// antes 
+// antes
 MYSQL_USER=root
-// depois 
+// depois
 MYSQL_USER=projeto_user
 ```
 
@@ -128,7 +129,7 @@ Essa foi a parte que mais me confundiu tentando conectar pelo DataGrip.
 
 Mudei o mapeamento de portas para `3307:3306` porque já tinha o MySQL local na 3306 e queria evitar conflito. O formato é sempre `PORTA_DO_HOST:PORTA_DO_CONTAINER`.
 
-O que demorei para entender é que essa regra não é global ela depende de *quem* está fazendo a conexão:
+O que demorei para entender é que essa regra não é global ela depende de _quem_ está fazendo a conexão:
 
 ```
 Seu PC (DataGrip, IntelliJ)
@@ -145,11 +146,11 @@ Seu PC (DataGrip, IntelliJ)
 backend-container
 ```
 
-| Quem conecta | Host | Porta |
-|---|---|---|
+| Quem conecta                    | Host        | Porta  |
+| ------------------------------- | ----------- | ------ |
 | DataGrip / IntelliJ (no seu PC) | `localhost` | `3307` |
-| Spring rodando no PC | `localhost` | `3307` |
-| Spring dentro do Docker Compose | `mysql` | `3306` |
+| Spring rodando no PC            | `localhost` | `3307` |
+| Spring dentro do Docker Compose | `mysql`     | `3306` |
 
 Por isso o `application.properties` usa `localhost:3307` quando você roda o Spring pela IDE, mas o `.env` usa `mysql:3306` quando o backend sobe via Compose. Não é inconsistência é contexto diferente.
 
@@ -179,7 +180,7 @@ O Desktop não substitui saber os comandos mas torna muito mais fácil debugar s
 
 ## O Dockerfile do Spring Boot
 
-Para o backend em Java, precisei de um Dockerfile com **multi-stage build**. O motivo é simples: a imagem que compila (com Maven + JDK) pesa em torno de 700MB. A imagem que só *roda* o `.jar` compilado (com JRE) pesa cerca de 180MB.
+Para o backend em Java, precisei de um Dockerfile com **multi-stage build**. O motivo é simples: a imagem que compila (com Maven + JDK) pesa em torno de 700MB. A imagem que só _roda_ o `.jar` compilado (com JRE) pesa cerca de 180MB.
 
 ```dockerfile
 # Stage 1 — compilação
