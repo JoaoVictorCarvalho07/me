@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>João Victor Carvalho — Dev Full-Stack</title>
+    <title>João Victor Carvalho · Dev Full-Stack</title>
     <meta
       name="description"
-      content="Portfólio pessoal do João Victor Carvalho — desenvolvedor Full-Stack. Projetos, experiência, skills e muito mais."
+      content="Portfólio pessoal do João Victor Carvalho: desenvolvedor Full-Stack. Projetos, experiência, skills e muito mais."
     />
-    <meta property="og:title" content="João Victor Carvalho — Dev Full-Stack" />
+    <meta property="og:title" content="João Victor Carvalho · Dev Full-Stack" />
     <meta
       property="og:description"
       content="Desenvolvedor Full-Stack apaixonado por Java, Node.js e React."
@@ -19,7 +19,8 @@
       rel="preload"
       fetchpriority="high"
       as="image"
-      href="public/Personal_image_Hero_.jpeg"
+      href="public/Personal_image_Hero_.webp"
+      type="image/webp"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +39,7 @@
         <a
           href="index.html"
           class="site-logo"
-          aria-label="João Victor — Início"
+          aria-label="João Victor, Início"
         >
           joao.dev<span>()</span>
         </a>
@@ -116,20 +117,20 @@
           <div class="hero-grid">
             <!-- Texto -->
             <div>
-              <p class="hero-eyebrow fade-up fade-up-1">Olá, eu sou</p>
-              <h1 id="hero-title" class="fade-up fade-up-2">
+              <h1 id="hero-title" class="fade-up fade-up-1">
                 João Victor Carvalho
-                <span>— Dev Full‑Stack</span>
+                <span>Dev Full‑Stack</span>
               </h1>
-              <p class="hero-desc fade-up fade-up-3">
+              <p class="hero-desc fade-up fade-up-2">
                 Construo produtos digitais performáticos e acessíveis.
                 Apaixonado por
                 <strong>Java</strong>, <strong>JavaScript/TypeScript</strong>,
-                <strong>Node.js</strong> e <strong>React</strong> — com carinho
-                especial por backend e boas práticas.
+                <strong>Node.js</strong> e <strong>React</strong>, com carinho
+                especial por backend e boas práticas. Na stack do dia a dia:
+                <strong>Spring (Java)</strong> e <strong>MySQL</strong>.
               </p>
 
-              <div class="hero-actions fade-up fade-up-4">
+              <div class="hero-actions fade-up fade-up-3">
                 <a href="projetos.html" class="btn btn-primary">
                   Ver projetos
                   <svg
@@ -203,19 +204,16 @@
             <!-- Imagem -->
             <div class="hero-img-wrap">
               <img
-                src="public/Personal_image_Hero_.jpeg"
-                alt="Setup de desenvolvimento com monitores e código"
+                src="public/Personal_image_Hero_.webp"
+                alt="João Victor Carvalho, sorrindo, vestindo camisa azul"
                 fetchpriority="high"
                 loading="eager"
                 class="hero-img-object-fit"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop'
+                "
               />
-              <div class="hero-badge" aria-hidden="true">
-                <div class="hero-badge-icon"></div>
-                <div>
-                  <p>Stack atual</p>
-                  <p>Spring Java • MySQL</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -227,8 +225,8 @@
           <h2 id="explore-title" style="margin-bottom: 1.5rem">
             Explore o site
           </h2>
-          <div class="preview-grid">
-            <a href="projetos.html" class="preview-card">
+          <div class="preview-layout">
+            <a href="projetos.html" class="preview-featured">
               <div class="preview-card-icon" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -254,86 +252,85 @@
               <span class="preview-card-arrow">Ver projetos →</span>
             </a>
 
-            <a href="sobre.html" class="preview-card">
-              <div class="preview-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path d="M18 11V6a2 2 0 00-2-2 2 2 0 00-2 2" />
-                  <path d="M14 10V4a2 2 0 00-2-2 2 2 0 00-2 2v2" />
-                  <path d="M10 10.5V6a2 2 0 00-2-2 2 2 0 00-2 2v8" />
-                  <path
-                    d="M18 8a2 2 0 114 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"
-                  />
-                </svg>
-              </div>
-              <h3>Sobre</h3>
-              <p>
-                Quem sou, minhas skills, experiência e trajetória acadêmica de
-                forma pessoal.
-              </p>
-              <span class="preview-card-arrow">Conhecer →</span>
-            </a>
+            <div class="preview-list" role="list">
+              <a href="sobre.html" class="preview-list-item" role="listitem">
+                <span class="preview-list-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="1em"
+                    height="1em"
+                  >
+                    <path d="M18 11V6a2 2 0 00-2-2 2 2 0 00-2 2" />
+                    <path d="M14 10V4a2 2 0 00-2-2 2 2 0 00-2 2v2" />
+                    <path d="M10 10.5V6a2 2 0 00-2-2 2 2 0 00-2 2v8" />
+                    <path
+                      d="M18 8a2 2 0 114 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"
+                    />
+                  </svg>
+                </span>
+                <span class="preview-list-text">
+                  <h3>Sobre</h3>
+                  <p>Quem sou, skills e trajetória acadêmica.</p>
+                </span>
+                <span class="preview-list-arrow" aria-hidden="true">→</span>
+              </a>
 
-            <a href="gostos.html" class="preview-card">
-              <div class="preview-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path d="M9 18V5l12-2v13" />
-                  <circle cx="6" cy="18" r="3" />
-                  <circle cx="18" cy="16" r="3" />
-                </svg>
-              </div>
-              <h3>Gostos</h3>
-              <p>
-                Músicas, séries, livros e coisas que me inspiram fora do mundo
-                do código.
-              </p>
-              <span class="preview-card-arrow">Explorar →</span>
-            </a>
+              <a href="gostos.html" class="preview-list-item" role="listitem">
+                <span class="preview-list-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="1em"
+                    height="1em"
+                  >
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
+                  </svg>
+                </span>
+                <span class="preview-list-text">
+                  <h3>Gostos</h3>
+                  <p>Músicas, séries, livros e inspirações.</p>
+                </span>
+                <span class="preview-list-arrow" aria-hidden="true">→</span>
+              </a>
 
-            <a href="agora.html" class="preview-card">
-              <div class="preview-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" />
-                </svg>
-              </div>
-              <h3>Agora</h3>
-              <p>
-                O que estou estudando, construindo e pensando nesse momento da
-                trajetória.
-              </p>
-              <span class="preview-card-arrow">Ver agora →</span>
-            </a>
+              <a href="agora.html" class="preview-list-item" role="listitem">
+                <span class="preview-list-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    width="1em"
+                    height="1em"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" />
+                  </svg>
+                </span>
+                <span class="preview-list-text">
+                  <h3>Agora</h3>
+                  <p>O que estou estudando e construindo.</p>
+                </span>
+                <span class="preview-list-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -518,6 +515,7 @@
     <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/mobileNav.js"></script>
   </body>
 </html>

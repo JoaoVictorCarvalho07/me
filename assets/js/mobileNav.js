@@ -1,9 +1,16 @@
+function setHamburgerExpanded(isOpen) {
+  document.querySelectorAll(".btn-hamburger").forEach((btn) => {
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+}
+
 function toggleMobileNav() {
   const nav = document.getElementById("mobileNav");
   const overlay = document.getElementById("navOverlay");
 
   nav.classList.toggle("open");
   overlay.classList.toggle("active");
+  setHamburgerExpanded(nav.classList.contains("open"));
 }
 
 function closeMobileNav() {
@@ -12,6 +19,7 @@ function closeMobileNav() {
 
   nav.classList.remove("open");
   overlay.classList.remove("active");
+  setHamburgerExpanded(false);
 }
 
 (function highlightActiveNav() {

@@ -29,8 +29,15 @@
   box-shadow: var(--shadow-soft);
 }
 
+.dark .btn-primary {
+  /* --color-accent-2 no escuro (#0ea5e9) só passa AA como texto sobre fundo
+     escuro; como fundo de botão com texto branco cai para ~2.8:1, então o
+     botão primário fixa a variante escura do acento independente do tema. */
+  background-color: #0369a1;
+}
+
 .btn-primary:hover {
-  background-color: #0284c7;
+  background-color: #017cb2;
   box-shadow: 0 10px 30px rgba(14, 165, 233, 0.25);
 }
 
@@ -92,20 +99,12 @@
   }
 }
 
-.hero-eyebrow {
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-muted);
-  margin-bottom: 0.75rem;
-}
-
 .hero h1 {
   margin-bottom: 1.5rem;
 }
 
 .hero h1 span {
-  color: var(--color-accent);
+  color: var(--color-accent-2);
 }
 
 .hero-desc {
@@ -152,52 +151,8 @@
   aspect-ratio: 4/3;
 }
 
-.hero-badge {
-  position: absolute;
-  bottom: -1.5rem;
-  left: -1.5rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-xl);
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
-  display: none;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-@media (min-width: 768px) {
-  .hero-badge {
-    display: flex;
-  }
-}
-
-.dark .hero-badge {
-  background-color: rgba(15, 23, 42, 0.7);
-}
-
-.hero-badge-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--color-accent), #22d3ee);
-  flex-shrink: 0;
-}
-
-.hero-badge p:first-child {
-  font-size: 0.625rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-muted);
-}
-
-.hero-badge p:last-child {
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
 /* ============================================
-   SEÇÕES 
+   SEÇÕES
    ============================================ */
 .section {
   padding: 5rem 0;
@@ -368,7 +323,7 @@
 }
 
 .footer-top {
-  color: var(--color-accent);
+  color: var(--color-accent-2);
   transition: opacity var(--transition);
 }
 .footer-top:hover {

@@ -1,409 +1,388 @@
 <!doctype html>
 <html lang="pt-br" class="scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Agora — João Victor Carvalho</title>
-    <meta
-      name="description"
-      content="O que João Victor está fazendo, estudando e pensando agora — snapshot da trajetória atual."
-    />
-    <meta name="theme-color" content="#0ea5e9" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
-      rel="stylesheet"
-    />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Agora · João Victor Carvalho</title>
+		<meta
+			name="description"
+			content="O que João Victor está fazendo, estudando e pensando agora: um snapshot da trajetória atual."
+		/>
+		<meta name="theme-color" content="#0ea5e9" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+			rel="stylesheet"
+		/>
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/agora.css" />
-    <link rel="stylesheet" href="assets/css/home.css" />
-  </head>
-  <body>
-    <!-- ===================== HEADER ===================== -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<link rel="stylesheet" href="assets/css/agora.css" />
+		<link rel="stylesheet" href="assets/css/home.css" />
+	</head>
+	<body>
+		<!-- ===================== HEADER ===================== -->
+		<script src="assets/js/theme.js"></script>
 
-    <header class="site-header" role="banner">
-      <div class="container">
-        <a
-          href="index.html"
-          class="site-logo"
-          aria-label="João Victor — Início"
-        >
-          joao.dev<span>()</span>
-        </a>
-        <nav class="site-nav" aria-label="Navegação principal">
-          <a href="projetos.html">Projetos</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="blog.html">Blog</a>
-          <a href="gostos.html">Gostos</a>
-          <a href="agora.html">Agora</a>
-          <a href="contato.html">Contato</a>
-        </nav>
-        <div class="header-actions">
-          <button class="btn-icon" id="theme-toggle" aria-label="Alternar tema">
-            <svg
-              class="icon-moon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
-              />
-            </svg>
-            <svg
-              class="icon-sun"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
-              />
-            </svg>
-          </button>
-          <button
-            class="btn-icon btn-hamburger"
-            aria-label="Abrir menu"
-            onclick="toggleMobileNav()"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <line x1="4" y1="6" x2="20" y2="6" />
-              <line x1="4" y1="12" x2="20" y2="12" />
-              <line x1="4" y1="18" x2="20" y2="18" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </header>
+		<header class="site-header" role="banner">
+			<div class="container">
+				<a
+					href="index.html"
+					class="site-logo"
+					aria-label="João Victor, Início"
+				>
+					joao.dev<span>()</span>
+				</a>
+				<nav class="site-nav" aria-label="Navegação principal">
+					<a href="projetos.html">Projetos</a>
+					<a href="sobre.html">Sobre</a>
+					<a href="blog.html">Blog</a>
+					<a href="gostos.html">Gostos</a>
+					<a href="agora.html">Agora</a>
+					<a href="contato.html">Contato</a>
+				</nav>
+				<div class="header-actions">
+					<button class="btn-icon" id="theme-toggle" aria-label="Alternar tema">
+						<svg
+							class="icon-moon"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							aria-hidden="true"
+						>
+							<path
+								d="M21.64 13a9 9 0 01-11.3-11.3 1 1 0 00-1.31-1.31A11 11 0 1022.95 14.3a1 1 0 00-1.31-1.31z"
+							/>
+						</svg>
+						<svg
+							class="icon-sun"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							aria-hidden="true"
+						>
+							<path
+								d="M6.76 4.84l-1.8-1.79L3.17 4.84 4.96 6.63 6.76 4.84zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7zm7.04 10.17l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 1h-2v3h2V1z"
+							/>
+						</svg>
+					</button>
+					<button
+						class="btn-icon btn-hamburger"
+						aria-label="Abrir menu"
+						onclick="toggleMobileNav()"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<line x1="4" y1="6" x2="20" y2="6" />
+							<line x1="4" y1="12" x2="20" y2="12" />
+							<line x1="4" y1="18" x2="20" y2="18" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
 
-    <!-- ===================== MAIN ===================== -->
-    <main>
-      <!-- Page header -->
-      <div class="page-header">
-        <div class="container">
-          <p class="eyebrow">
-            <span class="now-status-dot" aria-hidden="true"></span>
-            Snapshot atual
-          </p>
-          <h1>O que estou fazendo agora</h1>
-          <p>
-            Uma "now page" — snapshot honesto da minha trajetória neste momento.
-            Atualizado periodicamente.
-          </p>
-          <p class="now-date" aria-label="Última atualização">
-            Última atualização: Abril 2025
-          </p>
-        </div>
-      </div>
+		<!-- ===================== MAIN ===================== -->
+		<main>
+			<!-- Page header -->
+			<div class="page-header">
+				<div class="container">
+					<p class="eyebrow">
+						<span class="now-status-dot" aria-hidden="true"></span>
+						Snapshot atual
+					</p>
+					<h1>O que estou fazendo agora</h1>
+					<p>
+						Uma "now page": snapshot honesto da minha trajetória neste momento.
+						Atualizado periodicamente.
+					</p>
+					<p class="now-date" aria-label="Última atualização">
+						Última atualização: Abril 2025
+					</p>
+				</div>
+			</div>
 
-      <!-- ===================== CARDS "AGORA" ===================== -->
-      <section class="section" aria-labelledby="agora-title">
-        <div class="container">
-          <div class="now-grid">
-            <!-- Estudando -->
-            <div class="now-card">
-              <div class="now-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
-                  <path
-                    d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"
-                  />
-                </svg>
-              </div>
-              <h3>Estudando</h3>
-              <p>
-                Arquiteturas limpas (Clean Architecture, DDD), containerização
-                com Docker e primeiros passos em observabilidade com logs e
-                métricas.
-              </p>
-            </div>
+			<!-- ===================== CARDS "AGORA" ===================== -->
+			<section class="section" aria-labelledby="agora-title">
+				<div class="container">
+					<div class="now-grid">
+						<!-- Estudando -->
+						<div class="now-card">
+							<div class="now-card-icon" aria-hidden="true">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									width="1em"
+									height="1em"
+								>
+									<path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+									<path
+										d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"
+									/>
+								</svg>
+							</div>
+							<h3>Estudando</h3>
+							<p>
+								Arquiteturas limpas (Clean Architecture, DDD), containerização
+								com Docker e primeiros passos em observabilidade com logs e
+								métricas.
+							</p>
+						</div>
 
-            <!-- Construindo  -->
-            <div class="now-card">
-              <div class="now-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path
-                    d="M15 12l-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 010-3L12 9"
-                  />
-                  <path d="M17.64 15L22 10.64" />
-                  <path
-                    d="M20.91 11.7l-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 00-3.94-1.64H9l.92.82A6.18 6.18 0 0112 8.4v1.56l2 2h2.47l2.26 1.91"
-                  />
-                </svg>
-              </div>
-              <h3>Construindo</h3>
-              <p>
-                Este portfólio refatorado, novos projetos pessoais em Spring
-                Boot e explorando integrações com APIs externas.
-              </p>
-            </div>
+						<!-- Construindo  -->
+						<div class="now-card">
+							<div class="now-card-icon" aria-hidden="true">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									width="1em"
+									height="1em"
+								>
+									<path
+										d="M15 12l-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 010-3L12 9"
+									/>
+									<path d="M17.64 15L22 10.64" />
+									<path
+										d="M20.91 11.7l-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 00-3.94-1.64H9l.92.82A6.18 6.18 0 0112 8.4v1.56l2 2h2.47l2.26 1.91"
+									/>
+								</svg>
+							</div>
+							<h3>Construindo</h3>
+							<p>
+								A <strong>imageColor</strong>, plataforma web para uma
+								fotógrafa vender e entregar ensaios: galeria com marca d'água,
+								seleção pela cliente, pagamento via Pix/cartão e entrega dos
+								arquivos finais. Cobre a jornada da captação à entrega.
+							</p>
+						</div>
 
-            <!-- Faculdade -->
-            <div class="now-card">
-              <div class="now-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                </svg>
-              </div>
-              <h3>Faculdade</h3>
-              <p>Quinto período de Sistemas de Informação na PUCPR</p>
+						<!-- Faculdade -->
+						<div class="now-card">
+							<div class="now-card-icon" aria-hidden="true">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									width="1em"
+									height="1em"
+								>
+									<path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+									<path d="M6 12v5c3 3 9 3 12 0v-5" />
+								</svg>
+							</div>
+							<h3>Faculdade</h3>
+							<p>Sexto período de Sistemas de Informação na PUCPR</p>
 
-              <progress
-                class="progress-bar"
-                role="progressbar"
-                aria-valuenow="60"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                aria-label="Progresso da graduação"
-                value="60"
-                max="100"
-              ></progress>
-              <div class="progress-label">
-                <span>Graduação</span>
-                <span>~60%</span>
-              </div>
-            </div>
+							<progress
+								class="progress-bar"
+								role="progressbar"
+								aria-valuenow="70"
+								aria-valuemin="0"
+								aria-valuemax="100"
+								aria-label="Progresso da graduação"
+								value="70"
+								max="100"
+							></progress>
+							<div class="progress-label">
+								<span>Graduação</span>
+								<span>~70%</span>
+							</div>
+						</div>
 
-            <!-- Lendo -->
-            <div class="now-card">
-              <div class="now-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
-                  <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
-                </svg>
-              </div>
-              <h3>Lendo</h3>
-              <p>
-                Clean Code (Robert C. Martin) — revisitando os fundamentos para
-                escrever código que outras pessoas conseguem entender.
-              </p>
-            </div>
+						<!-- Lendo -->
+						<div class="now-card">
+							<div class="now-card-icon" aria-hidden="true">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									width="1em"
+									height="1em"
+								>
+									<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+									<path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+								</svg>
+							</div>
+							<h3>Lendo</h3>
+							<p>
+								Clean Code (Robert C. Martin), revisitando os fundamentos para
+								escrever código que outras pessoas conseguem entender.
+							</p>
+						</div>
 
-            <!-- Objetivo próximo -->
-            <div class="now-card">
-              <div class="now-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" />
-                </svg>
-              </div>
-              <h3>Objetivo próximo</h3>
-              <p>
-                Conseguir minha primeira experiência profissional formal como
-                desenvolvedor na Wise group — até o metade de 2026.
-              </p>
-            </div>
+						<!-- Pensando em -->
+						<div class="now-card">
+							<div class="now-card-icon" aria-hidden="true">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									width="1em"
+									height="1em"
+								>
+									<path
+										d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+									/>
+								</svg>
+							</div>
+							<h3>Pensando em</h3>
+							<p>
+								Numa stack mais enxuta como próximo caminho:
+								<strong>htmx</strong>, <strong>Go</strong> e
+								<strong>SQLite</strong>: menos JavaScript, mais simplicidade e
+								performance.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <!-- Pensando em -->
-            <div class="now-card">
-              <div class="now-card-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  width="1em"
-                  height="1em"
-                >
-                  <path
-                    d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
-                  />
-                </svg>
-              </div>
-              <h3>Pensando em</h3>
-              <p>
-                Como escrever código mais performatico, a importância de
-                documentar decisões técnicas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+			<hr class="section-divider" />
 
-      <hr class="section-divider" />
+			<!-- ===================== PRÓXIMOS APRENDIZADOS ===================== -->
+			<section class="section" aria-labelledby="roadmap-title">
+				<div class="container">
+					<div class="about-grid">
+						<h2 id="roadmap-title">No radar</h2>
+						<div>
+							<p style="color: var(--color-muted); margin-bottom: 1.5rem">
+								Tópicos que pretendo mergulhar nos próximos meses:
+							</p>
+							<ul class="tags" role="list" style="gap: 0.75rem">
+								<li class="tag">Testes unitários (JUnit / Jest)</li>
+								<li class="tag">CI/CD com GitHub Actions</li>
+								<li class="tag">Event-driven (Kafka)</li>
+								<li class="tag">Messages (RabbitMQ)</li>
+								<li class="tag">TypeScript (avançado)</li>
+								<li class="tag">System Design</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <!-- ===================== PRÓXIMOS APRENDIZADOS ===================== -->
-      <section class="section" aria-labelledby="roadmap-title">
-        <div class="container">
-          <div class="about-grid">
-            <h2 id="roadmap-title">No radar</h2>
-            <div>
-              <p style="color: var(--color-muted); margin-bottom: 1.5rem">
-                Tópicos que pretendo mergulhar nos próximos meses:
-              </p>
-              <ul class="tags" role="list" style="gap: 0.75rem">
-                <li class="tag">Testes unitários (JUnit / Jest)</li>
-                <li class="tag">CI/CD com GitHub Actions</li>
-                <li class="tag">Event-driven (Kafka)</li>
-                <li class="tag">Messages (RabbitMQ)</li>
-                <li class="tag">TypeScript (avançado)</li>
-                <li class="tag">System Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+			<!-- ===================== CTA ===================== -->
+			<section class="section-alt" aria-label="Contato">
+				<div class="container" style="text-align: center">
+					<h2>Vamos conversar?</h2>
+					<p
+						style="
+							color: var(--color-muted);
+							margin-top: 0.75rem;
+							margin-bottom: 1.5rem;
+							max-width: 40ch;
+							margin-inline: auto;
+						"
+					>
+						Se você também está nessa fase de crescimento, adora tecnologia ou
+						tem uma proposta, manda mensagem.
+					</p>
+					<a
+						href="https://wa.me/5592981920847"
+						target="_blank"
+						rel="noreferrer"
+						class="btn btn-primary"
+						>Falar no WhatsApp</a
+					>
+				</div>
+			</section>
+		</main>
 
-      <!-- ===================== CTA ===================== -->
-      <section class="section-alt" aria-label="Contato">
-        <div class="container" style="text-align: center">
-          <h2>Vamos conversar?</h2>
-          <p
-            style="
-              color: var(--color-muted);
-              margin-top: 0.75rem;
-              margin-bottom: 1.5rem;
-              max-width: 40ch;
-              margin-inline: auto;
-            "
-          >
-            Se você também está nessa fase de crescimento, adora tecnologia ou
-            tem uma proposta, manda mensagem.
-          </p>
-          <a
-            href="https://wa.me/5592981920847"
-            target="_blank"
-            rel="noreferrer"
-            class="btn btn-primary"
-            >Falar no WhatsApp</a
-          >
-        </div>
-      </section>
-    </main>
+		<!-- ===================== FOOTER ===================== -->
+		<footer class="site-footer" role="contentinfo">
+			<div class="container">
+				<p>
+					© <span class="js-year"></span> João Victor Carvalho. Feito com muito
+					café
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						width="1em"
+						height="1em"
+						style="vertical-align: -0.125em"
+						aria-hidden="true"
+					>
+						<path d="M18 8h1a4 4 0 010 8h-1" />
+						<path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+						<line x1="6" y1="1" x2="6" y2="4" />
+						<line x1="10" y1="1" x2="10" y2="4" />
+						<line x1="14" y1="1" x2="14" y2="4" />
+					</svg>
+				</p>
+				<a href="#" class="footer-top" aria-label="Voltar ao topo"
+					>Voltar ao topo ↑</a
+				>
+			</div>
+		</footer>
+		<!-- Nav mobile -->
+		<nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
+			<div class="container">
+				<button
+					class="btn-icon btn-hamburger"
+					aria-label="Abrir menu"
+					aria-expanded="false"
+					id="theme-toggle"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<line x1="4" y1="6" x2="20" y2="6" />
+						<line x1="4" y1="12" x2="20" y2="12" />
+						<line x1="4" y1="18" x2="20" y2="18" />
+					</svg>
+				</button>
+				<a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
+				<a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
+				<a href="blog.html" onclick="closeMobileNav()">Blog</a>
+				<a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
+				<a href="agora.html" onclick="closeMobileNav()">Agora</a>
+				<a href="contato.html" onclick="closeMobileNav()">Contato</a>
+			</div>
+		</nav>
+		<div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <p>
-          © <span class="js-year"></span> João Victor Carvalho. Feito com muito
-          café
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            width="1em"
-            height="1em"
-            style="vertical-align: -0.125em"
-            aria-hidden="true"
-          >
-            <path d="M18 8h1a4 4 0 010 8h-1" />
-            <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
-            <line x1="6" y1="1" x2="6" y2="4" />
-            <line x1="10" y1="1" x2="10" y2="4" />
-            <line x1="14" y1="1" x2="14" y2="4" />
-          </svg>
-        </p>
-        <a href="#" class="footer-top" aria-label="Voltar ao topo"
-          >Voltar ao topo ↑</a
-        >
-      </div>
-    </footer>
-    <!-- Nav mobile -->
-    <nav id="mobileNav" class="mobile-nav" aria-label="Navegação mobile">
-      <div class="container">
-        <button
-          class="btn-icon btn-hamburger"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          id="theme-toggle"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-            <line x1="4" y1="18" x2="20" y2="18" />
-          </svg>
-        </button>
-        <a href="projetos.html" onclick="closeMobileNav()">Projetos</a>
-        <a href="sobre.html" onclick="closeMobileNav()">Sobre</a>
-        <a href="blog.html" onclick="closeMobileNav()">Blog</a>
-        <a href="gostos.html" onclick="closeMobileNav()">Gostos</a>
-        <a href="agora.html" onclick="closeMobileNav()">Agora</a>
-        <a href="contato.html" onclick="closeMobileNav()">Contato</a>
-      </div>
-    </nav>
-    <div id="navOverlay" class="nav-overlay" onclick="closeMobileNav()"></div>
-
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/mobileNav.js"></script>
-  </body>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/mobileNav.js"></script>
+	</body>
 </html>
