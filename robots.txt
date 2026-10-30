@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joaovictorcarvalho07.github.io/me/sitemap.xml
