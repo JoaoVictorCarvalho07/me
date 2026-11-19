@@ -2,7 +2,6 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const root = join(process.cwd(), "out");
-const base = "/me";
 const externalHosts = new Set([
   "github.com",
   "www.github.com",
@@ -22,7 +21,7 @@ function walk(dir, acc = []) {
 }
 
 function toFile(urlPath) {
-  const rel = urlPath.slice(base.length).replace(/^\//, "");
+  const rel = urlPath.replace(/^\//, "");
   if (rel === "") return join(root, "index.html");
   if (rel.endsWith("/")) return join(root, rel, "index.html");
   return join(root, rel);
@@ -42,14 +41,10 @@ for (const file of pages) {
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const url = match[1];
     if (!url || url.startsWith("#") || url.startsWith("mailto:") || url.startsWith("data:")) continue;
-    if (url.startsWith(base)) {
+    if (url.startsWith("/")) {
       const pathOnly = url.split("#")[0].split("?")[0];
       const target = toFile(pathOnly);
       if (!existsSync(target)) missing.push(`${file}: ${url}`);
-      continue;
-    }
-    if (url.startsWith("/")) {
-      missing.push(`${file}: sem basePath ${url}`);
       continue;
     }
     if (url.startsWith("http://") || url.startsWith("https://")) {

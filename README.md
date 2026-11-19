@@ -1,6 +1,6 @@
 # joao.dev() — portfólio
 
-Portfólio pessoal de **João Victor Carvalho**, desenvolvedor full-stack. O site é um export estático de Next.js, publicado no GitHub Pages em [joaovictorcarvalho07.github.io/me](https://joaovictorcarvalho07.github.io/me/).
+Portfólio pessoal de **João Victor Carvalho**, desenvolvedor full-stack. O site é um export estático de Next.js, publicado no GitHub Pages na raiz de [jvcode.dev](https://jvcode.dev).
 
 ## Stack
 
@@ -8,7 +8,7 @@ Portfólio pessoal de **João Victor Carvalho**, desenvolvedor full-stack. O sit
 - Tailwind CSS v4, com os tokens em `app/tokens.css`
 - `next/font` (JetBrains Mono e IBM Plex Sans) e `next-themes` (escuro por padrão)
 - Posts em Markdown (`content/posts`) com frontmatter tipado
-- `output: 'export'` e `basePath: '/me'`
+- `output: 'export'`, servido na raiz do domínio
 
 ## Rodando localmente
 
@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-Abra [http://localhost:3000/me](http://localhost:3000/me).
+Abra [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run lint
@@ -50,14 +50,19 @@ Por enquanto só pt-BR. Os textos de interface ficam em `lib/i18n/pt-BR.ts`. Um 
 2. Wikilinks `[[outro-slug]]` viram links para o post correspondente.
 3. O build gera a rota, a metadata, a imagem OG, o sitemap e o RSS.
 
-## GitHub Pages
+## GitHub Pages e o domínio
 
-O workflow (`.github/workflows/ci.yml`) roda lint, typecheck, build e link-check em todo pull request. **O deploy só acontece no push da `master`.** Enquanto esta branch não for mergeada, o site no ar não muda.
+O workflow (`.github/workflows/ci.yml`) roda lint, typecheck, build e link-check em todo pull request. **O deploy só acontece no push da `master`.**
 
-Para o Actions passar a publicar:
+A fonte do Pages precisa ser **GitHub Actions** (Settings → Pages → Build and deployment → Source). O artefato é a pasta `out/`, servida na raiz. `public/CNAME` entra nesse artefato com o conteúdo `jvcode.dev`.
 
-1. No repositório, abra **Settings → Pages**.
-2. Em **Build and deployment**, mude **Source** para **GitHub Actions**.
-3. Faça o merge na `master`.
+No DNS de `jvcode.dev`, aponte o ápice para o GitHub Pages:
 
-Se a fonte continuar sendo “Deploy from a branch”, o workflow de deploy não substitui os arquivos que estão no ar.
+| Tipo | Valor |
+| --- | --- |
+| A | `185.199.108.153` |
+| A | `185.199.109.153` |
+| A | `185.199.110.153` |
+| A | `185.199.111.153` |
+
+Em Settings → Pages, o custom domain fica `jvcode.dev`. Depois que o DNS responder, marque **Enforce HTTPS**. O GitHub passa a servir o site em `https://jvcode.dev`. O endereço antigo `joaovictorcarvalho07.github.io/me` deixa de ser a URL canônica.
