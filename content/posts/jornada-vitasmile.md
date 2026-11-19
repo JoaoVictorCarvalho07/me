@@ -16,7 +16,7 @@ desc: Do nome da marca ao deploy na nuvem, o relato de como construí um sistema
 date: 16 Jun 2026
 tag: Projeto
 readTime: 11 min
-thumb: assets/img/blog/vitasmile.avif
+thumb: /images/blog/vitasmile.avif
 ---
 
 O briefing era um projeto final: um sistema de gestão de consultas odontológicas, com **Angular + Spring Boot + banco relacional**, autenticação, perfis de usuário e relatórios. Parecia direto. No papel sempre parece.
