@@ -1,0 +1,163 @@
+/* ==========================================================================
+   joao.dev() — Design tokens v2 ("terminal/engenharia")
+   Dark é o tema padrão. O tema claro ("papel/blueprint") entra com
+   [data-theme="light"] no <html> ou pela preferência do sistema.
+   Contrastes medidos (WCAG 2.x) estão anotados ao lado de cada cor de texto.
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* ---- Superfícies ---- */
+  --bg:            #0B0D10; /* fundo da página: quase preto, levemente frio */
+  --bg-raised:     #111419; /* cards, nav, janelas */
+  --bg-sunken:     #07080A; /* corpo do terminal, blocos de código */
+  --bg-hover:      #171B22; /* hover de linhas/cards */
+  --border:        #222731; /* bordas padrão (1px) */
+  --border-strong: #343B48; /* borda de foco/hover, divisores fortes */
+
+  /* ---- Texto ---- */
+  --text:          #E7E9EE; /* 16.0:1 no --bg */
+  --text-muted:    #9BA3B1; /*  7.7:1 */
+  --text-faint:    #7D8594; /*  5.2:1, metadados, timestamps */
+
+  /* ---- Destaque ---- */
+  --accent:        #FFB547; /* âmbar fósforo, 11.1:1 no --bg */
+  --accent-hover:  #FFC56E;
+  --accent-ink:    #1A1205; /* texto sobre --accent, 10.6:1 */
+  --accent-fill:   #FFB547; /* preenchimento de botão primário */
+  --accent-soft:   rgb(255 181 71 / 0.12); /* fundos de badge/realce */
+  --accent-line:   rgb(255 181 71 / 0.35);
+
+  --secondary:     #6CCFE4; /* ciano, links/diagramas/info, 10.8:1 */
+  --secondary-soft: rgb(108 207 228 / 0.12);
+
+  /* ---- Semântico (status) ---- */
+  --ok:    #5BD08A; /* online, deploy ok */
+  --warn:  #FFB547; /* em andamento (reusa o âmbar) */
+  --err:   #FF7A6B;
+  --idle:  #7D8594;
+
+  /* ---- Fundo blueprint ---- */
+  --grid-minor: rgb(255 255 255 / 0.028);
+  --grid-major: rgb(255 255 255 / 0.05);
+  --glow:       rgb(255 181 71 / 0.07);
+
+  /* ---- Sombras (dark: quase nenhuma; a borda faz o trabalho) ---- */
+  --shadow-sm: 0 1px 0 rgb(255 255 255 / 0.03) inset;
+  --shadow-md: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 12px 32px -12px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 1px 0 rgb(255 255 255 / 0.05) inset, 0 24px 64px -24px rgb(0 0 0 / 0.75);
+
+  /* ---- Terminal (igual nos dois temas: a "janela" é sempre escura) ---- */
+  --term-bg:     #07080A;
+  --term-bar:    #111419;
+  --term-border: #262B35;
+  --term-text:   #E7E9EE;
+  --term-muted:  #9BA3B1;
+  --term-prompt: #5BD08A;
+  --term-path:   #6CCFE4;
+  --term-accent: #FFB547;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg:            #F2EFE7; /* papel */
+  --bg-raised:     #FAF8F3;
+  --bg-sunken:     #E9E5DA;
+  --bg-hover:      #EDE9DF;
+  --border:        #D9D3C4;
+  --border-strong: #B9B1A0;
+
+  --text:          #1B1E24; /* 14.5:1 */
+  --text-muted:    #4D5461; /*  6.6:1 */
+  --text-faint:    #60666F; /*  4.9:1 */
+
+  --accent:        #9A5800; /* âmbar queimado para texto/links, 4.9:1 */
+  --accent-hover:  #7E4800;
+  --accent-ink:    #1A1205;
+  --accent-fill:   #F0A53A; /* preenchimento de botão (texto escuro por cima, 9.0:1) */
+  --accent-soft:   rgb(240 165 58 / 0.18);
+  --accent-line:   rgb(154 88 0 / 0.35);
+
+  --secondary:     #1F5A9E; /* azul blueprint, 6.1:1 */
+  --secondary-soft: rgb(31 90 158 / 0.10);
+
+  --ok:   #1F7A45;
+  --warn: #9A5800;
+  --err:  #B3261E;
+  --idle: #60666F;
+
+  --grid-minor: rgb(31 90 158 / 0.06);
+  --grid-major: rgb(31 90 158 / 0.11);
+  --glow:       rgb(240 165 58 / 0.10);
+
+  --shadow-sm: 0 1px 2px rgb(40 30 10 / 0.06);
+  --shadow-md: 0 1px 2px rgb(40 30 10 / 0.06), 0 10px 28px -14px rgb(40 30 10 / 0.25);
+  --shadow-lg: 0 2px 4px rgb(40 30 10 / 0.06), 0 24px 56px -24px rgb(40 30 10 / 0.35);
+}
+
+:root {
+  /* Famílias vêm do next/font (--font-jetbrains / --font-plex) em globals.css. */
+
+  /* escala modular 1.25 (major third), base 16px; display com clamp */
+  --text-2xs: 0.6875rem; /* 11px: labels de status bar */
+  --text-xs:  0.75rem;   /* 12px: badges, metadados */
+  --text-sm:  0.875rem;  /* 14px: UI, nav, terminal */
+  --text-base: 1rem;     /* 16px: corpo */
+  --text-lg:  1.125rem;  /* 18px: lead */
+  --text-xl:  1.375rem;  /* 22px: título de card */
+  --text-2xl: 1.75rem;   /* 28px: título de seção */
+  --text-3xl: clamp(2rem, 1.4rem + 2.2vw, 2.75rem);   /* 32→44: H2 grande */
+  --text-display: clamp(2.5rem, 1.5rem + 4.2vw, 4.75rem); /* 40→76: hero */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-body: 1.65;
+  --tracking-tight: -0.03em; /* display mono */
+  --tracking-wide: 0.08em;   /* labels caixa-alta */
+
+  /* ---- Espaçamento (base 4px) ---- */
+  --space-1: 0.25rem;  /* 4  */
+  --space-2: 0.5rem;   /* 8  */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+  --space-10: 8rem;    /* 128 */
+
+  --container: 76rem;  /* 1216px */
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --grid-size: 24px;   /* célula do fundo blueprint */
+
+  /* ---- Raio: pequeno e técnico ---- */
+  --radius-xs: 3px;  /* badges, kbd */
+  --radius-sm: 6px;  /* botões, inputs */
+  --radius-md: 10px; /* cards, janelas */
+  --radius-pill: 999px; /* só status dots */
+
+  /* ---- Bordas ---- */
+  --border-w: 1px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;  /* hover, foco */
+  --dur-base: 220ms;  /* abrir/fechar, troca de tema */
+  --dur-slow: 480ms;  /* revelação de seção */
+  --type-speed: 38ms; /* por caractere no terminal */
+  --blink: 1.1s;      /* cursor */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+    --type-speed: 0ms;
+  }
+}

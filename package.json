@@ -1,0 +1,31 @@
+{
+  "name": "me",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/fix-og.mjs",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "link-check": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "16.4.6",
+    "next-themes": "^0.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
+  }
+}

@@ -16,7 +16,7 @@ desc: Como aprendi Docker e Docker Compose na prática tentando isolar o banco d
 date: 27 Mai 2026
 tag: DevOps
 readTime: 12 min
-thumb: assets/img/blog/docker_learning.avif
+thumb: /images/blog/docker_learning.avif
 ---
 
 Eu já tinha o MySQL instalado direto na minha máquina. Funcionava, estava configurado, os projetos da faculdade dependiam dele. Aí comecei um novo projeto , um sistema de gestão de consultas em Spring Boot e não queria que o banco desse projeto interferisse no que já existia.
