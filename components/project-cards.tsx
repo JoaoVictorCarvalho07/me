@@ -136,7 +136,7 @@ function Artifact({ project }: { project: Project }) {
         <span className="c">{"// branch reescrita-next\n"}</span>
         <span className="k">live</span> <span className="s">isabelpontes.com.br</span>
         {"\n"}
-        <span className="k">stack</span> Next.js
+        <span className="k">stack</span> Next.js · /midiakit
       </pre>
     );
   }

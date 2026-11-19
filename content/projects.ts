@@ -135,7 +135,7 @@ export const projects: Project[] = [
     title: "Site Isabel Pontes",
     window: "site-isabel-pontes",
     summary:
-      "Site para uma cliente real, fotógrafa e criadora de conteúdo, com páginas de sobre, contato e galeria. Refatorado em Next.js e no ar.",
+      "Site da fotógrafa Isabel Pontes, em Next.js e no ar. O mídia kit passou a fazer parte dele, junto com galeria, sobre e contato.",
     status: "cliente real",
     tone: "ok",
     live: true,
@@ -143,6 +143,7 @@ export const projects: Project[] = [
       { label: "Next.js", tone: "accent" },
       { label: "TypeScript" },
       { label: "React" },
+      { label: "SQLite" },
     ],
     links: [
       { label: "site ↗", href: "https://isabelpontes.com.br" },
@@ -198,23 +199,6 @@ export const projects: Project[] = [
     home: "log",
     span: "2",
     filters: ["java", "mobile"],
-  },
-  {
-    slug: "midiakit",
-    title: "Mídia Kit UGC",
-    window: "midiakit",
-    summary: "Portfólio dinâmico para criadores de conteúdo UGC. Arquivos salvos no Cloudflare R2.",
-    status: "freela",
-    tone: "ok",
-    level: "[web]",
-    stack: [{ label: "JavaScript" }, { label: "Cloudflare R2" }],
-    // TODO: o host público do mídia kit não resolve. Ficou só o repositório.
-    links: [{ label: "repo ↗", href: `${gh}/Midiakit_isabelPontes` }],
-    featured: false,
-    home: "log",
-    span: "2",
-    filters: ["frontend"],
-    image: "/images/projects/midiakit.webp",
   },
   {
     slug: "portfolio-paulo",
